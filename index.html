@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minutrisalud — Consulta de nutrición clínica personalizada</title>
+  <meta name="description" content="Minutrisalud: consulta de nutrición con criterio médico. Valoración, planes personalizados y seguimiento presencial o por teleconsulta." />
+  <meta property="og:title" content="Minutrisalud — Consulta de nutrición clínica personalizada" />
+  <meta property="og:description" content="Minutrisalud: consulta de nutrición con criterio médico. Valoración, planes personalizados y seguimiento presencial o por teleconsulta." />
+  <meta property="og:image" content="./assets/hero.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=erode@400,500,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img class="brand-mark" src="./assets/logo-icon.png" alt="" width="34" height="34">
+        <span class="brand-name">Minutrisalud</span>
+      </a>
+      <nav class="nav">
+        <div class="nav-links">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="app.html">App Minutrisalud</a>
+        <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" data-theme-toggle type="button"></button>
+          <a href="contacto.html" class="btn btn--primary btn--sm">Reservar consulta</a>
+        </div>
+        <button class="nav-toggle" aria-label="Abrir menú" type="button">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand">
+        <img class="brand-mark" src="./assets/logo-icon.png" alt="" width="34" height="34">
+        <span class="brand-name">Minutrisalud</span>
+      </a>
+      <button class="mobile-nav-close" aria-label="Cerrar menú" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="app.html">App Minutrisalud</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="mobile-nav-actions">
+      <button class="theme-toggle" data-theme-toggle type="button" style="align-self:flex-start;"></button>
+      <a href="contacto.html" class="btn btn--primary">Reservar consulta</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Consulta de nutrición clínica</span>
+        <h1>Nutrición con criterio médico, hecha a tu medida</h1>
+        <p class="lede">Minutrisalud acompaña tu alimentación con valoración clínica, planes personalizados y seguimiento cercano — presencial o por teleconsulta.</p>
+        <div class="hero-actions">
+          <a href="contacto.html" class="btn btn--primary">Reservar primera consulta</a>
+          <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-num">+10</span>
+            <span class="stat-label">años de práctica clínica</span>
+          </div>
+          <div>
+            <span class="stat-num">100%</span>
+            <span class="stat-label">planes individualizados</span>
+          </div>
+          <div>
+            <span class="stat-num">Online</span>
+            <span class="stat-label">y presencial</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <img src="./assets/hero.png" alt="Mesa con alimentos frescos y saludables: verduras de hoja verde, nueces, cítricos y pan integral" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Cómo ayudamos</span>
+        <h2>Un enfoque clínico de la nutrición</h2>
+        <p>Cada plan nace de una valoración real de tu salud, no de tablas genéricas.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Valoración inicial completa</h3>
+          <p>Historia clínica, composición corporal y hábitos, para entender tu punto de partida real.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 4 13c0-4 2-9 9-13 2 4 9 5 9 13a7 7 0 0 1-7 7c-2.5 0-4-1-6-3z"/><path d="M4 13c4 0 8 2 10 5"/></svg></div>
+          <h3>Planes personalizados</h3>
+          <p>Alimentación adaptada a tu diagnóstico, tus gustos y tu rutina — nada de dietas de plantilla.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 3 5-7"/></svg></div>
+          <h3>Seguimiento y ajuste</h3>
+          <p>Revisiones periódicas con indicadores objetivos para ajustar el plan según tu evolución.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Por qué Minutrisalud</span>
+        <h2>La nutrición como parte de tu tratamiento, no aparte de él</h2>
+        <p style="margin-bottom:var(--space-6);">Detrás de cada recomendación hay criterio médico: se tienen en cuenta tus antecedentes, tu medicación y tus analíticas, coordinando la alimentación con el resto de tu cuidado.</p>
+        <ul class="check-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Valoración nutricional con base clínica, no solo estética</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Coordinación con otras especialidades cuando es necesario</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Planes realistas, revisables y sin prohibiciones absolutas</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Teleconsulta disponible para el seguimiento</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <img src="./assets/consulta.png" alt="Escritorio de consulta con cuaderno de notas, cinta métrica y un vaso de agua con limón" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Proceso</span>
+        <h2>Cómo es tu primera consulta</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="step-num">01</span>
+          <h3>Reserva</h3>
+          <p style="font-size:var(--text-sm);">Eliges cita presencial o por videollamada según tu disponibilidad.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">02</span>
+          <h3>Valoración</h3>
+          <p style="font-size:var(--text-sm);">Revisamos tu historia clínica, hábitos y objetivos con calma.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">03</span>
+          <h3>Plan</h3>
+          <p style="font-size:var(--text-sm);">Recibes un plan de alimentación personalizado y comprensible.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">04</span>
+          <h3>Seguimiento</h3>
+          <p style="font-size:var(--text-sm);">Ajustamos el plan en revisiones periódicas según tu progreso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="quote-block reveal" style="max-width:720px;margin-inline:auto;text-align:center;border-left:none;">
+        <p>“Un plan de alimentación solo funciona si se entiende por qué se recomienda y se ajusta a la vida real de cada paciente.”</p>
+        <span class="quote-cite">Filosofía de trabajo — Minutrisalud</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="app-teaser reveal">
+        <div class="app-teaser-copy">
+          <span class="badge">Próximamente</span>
+          <h2>La app Minutrisalud está en camino</h2>
+          <p>Estamos preparando una aplicación para llevar tu plan de alimentación, registrar tu seguimiento y comunicarte con la consulta desde el móvil.</p>
+          <a href="app.html" class="btn btn--ghost" style="margin-top:var(--space-4);width:fit-content;">Ver adelanto de la app</a>
+        </div>
+        <div class="app-teaser-media">
+          <img src="./assets/app-preview.png" alt="Vista previa conceptual de la futura app Minutrisalud en un teléfono móvil" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>Empecemos por entender cómo comes hoy</h2>
+        <p style="max-width:520px;margin-inline:auto;margin-bottom:var(--space-6);">Reserva tu primera valoración y recibe un plan pensado para tu salud, no para una talla.</p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Reservar consulta</a>
+          <a href="servicios.html" class="btn btn--ghost">Ver todos los servicios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img class="brand-mark" src="./assets/logo-icon.png" alt="" width="34" height="34">
+            <span class="brand-name">Minutrisalud</span>
+          </a>
+          <p>Consulta de nutrición clínica personalizada: valoración, planes de alimentación y seguimiento con respaldo médico.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="app.html">App Minutrisalud</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="servicios.html#valoracion">Valoración nutricional</a></li>
+            <li><a href="servicios.html#planes">Planes personalizados</a></li>
+            <li><a href="servicios.html#seguimiento">Seguimiento y control</a></li>
+            <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@minutrisalud.com" target="_blank" rel="noopener noreferrer">hola@minutrisalud.com</a></li>
+            <li><a href="contacto.html">Solicitar cita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Minutrisalud. Todos los derechos reservados.</p>
+        <p>Contenido con fines informativos. No sustituye una valoración médica presencial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
