@@ -3,7 +3,7 @@ import re
 NAV_ITEMS = [
     ("Inicio", "index.html"),
     ("Servicios", "servicios.html"),
-    ("Sobre mí", "sobre-mi.html"),
+    ("Equipo", "equipo.html"),
     ("App Minutrisalud", "app.html"),
     ("Contacto", "contacto.html"),
 ]
@@ -31,7 +31,7 @@ def header(active):
         </div>
         <div class="nav-actions">
           <button class="theme-toggle" data-theme-toggle type="button"></button>
-          <a href="contacto.html" class="btn btn--primary btn--sm">Reservar consulta</a>
+          <a href="contacto.html" class="btn btn--primary btn--sm">Consulta online</a>
         </div>
         <button class="nav-toggle" aria-label="Abrir menú" type="button">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -55,9 +55,10 @@ def header(active):
     </div>
     <div class="mobile-nav-actions">
       <button class="theme-toggle" data-theme-toggle type="button" style="align-self:flex-start;"></button>
-      <a href="contacto.html" class="btn btn--primary">Reservar consulta</a>
+      <a href="contacto.html" class="btn btn--primary">Reservar consulta online</a>
     </div>
   </div>
+
 '''
 
 FOOTER = f'''  <footer class="footer">
@@ -68,24 +69,24 @@ FOOTER = f'''  <footer class="footer">
             {BRAND_SVG}
             <span class="brand-name">Minutrisalud</span>
           </a>
-          <p>Consulta de nutrición clínica personalizada: valoración, planes de alimentación y seguimiento con respaldo médico.</p>
+          <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento — también presencial si lo prefieres.</p>
         </div>
         <div>
           <h4>Navegación</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
             <li><a href="app.html">App Minutrisalud</a></li>
           </ul>
         </div>
         <div>
           <h4>Servicios</h4>
           <ul>
+            <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
             <li><a href="servicios.html#valoracion">Valoración nutricional</a></li>
             <li><a href="servicios.html#planes">Planes personalizados</a></li>
             <li><a href="servicios.html#seguimiento">Seguimiento y control</a></li>
-            <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
           </ul>
         </div>
         <div>

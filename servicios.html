@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicios — Minutrisalud</title>
-  <meta name="description" content="Valoración nutricional, planes de alimentación personalizados, seguimiento periódico y teleconsulta en Minutrisalud." />
+  <meta name="description" content="Teleconsulta como canal principal, valoración nutricional, planes de alimentación personalizados y seguimiento periódico en Minutrisalud." />
   <meta property="og:title" content="Servicios — Minutrisalud" />
-  <meta property="og:description" content="Valoración nutricional, planes de alimentación personalizados, seguimiento periódico y teleconsulta en Minutrisalud." />
+  <meta property="og:description" content="Teleconsulta como canal principal, valoración nutricional, planes de alimentación personalizados y seguimiento periódico en Minutrisalud." />
   <meta property="og:image" content="./assets/hero.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,13 +26,13 @@
         <div class="nav-links">
         <a href="index.html">Inicio</a>
         <a href="servicios.html" aria-current="page">Servicios</a>
-        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="equipo.html">Equipo</a>
         <a href="app.html">App Minutrisalud</a>
         <a href="contacto.html">Contacto</a>
         </div>
         <div class="nav-actions">
           <button class="theme-toggle" data-theme-toggle type="button"></button>
-          <a href="contacto.html" class="btn btn--primary btn--sm">Reservar consulta</a>
+          <a href="contacto.html" class="btn btn--primary btn--sm">Consulta online</a>
         </div>
         <button class="nav-toggle" aria-label="Abrir menú" type="button">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -54,28 +54,48 @@
     <div class="mobile-nav-links">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
-      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="equipo.html">Equipo</a>
       <a href="app.html">App Minutrisalud</a>
       <a href="contacto.html">Contacto</a>
     </div>
     <div class="mobile-nav-actions">
       <button class="theme-toggle" data-theme-toggle type="button" style="align-self:flex-start;"></button>
-      <a href="contacto.html" class="btn btn--primary">Reservar consulta</a>
+      <a href="contacto.html" class="btn btn--primary">Reservar consulta online</a>
     </div>
   </div>
+
 
   <section class="page-hero">
     <div class="wrap wrap--narrow">
       <span class="eyebrow" style="justify-content:center;">Servicios</span>
-      <h1>Consulta de nutrición, paso a paso</h1>
-      <p class="lede" style="margin-inline:auto;text-align:center;">Cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado.</p>
+      <h1>Consulta de nutrición online, paso a paso</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Atendemos principalmente por videollamada; cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado. También disponible de forma presencial si lo prefieres.</p>
     </div>
   </section>
 
-  <section class="section" id="valoracion">
+  <section class="section" id="teleconsulta">
     <div class="wrap split">
       <div class="reveal">
-        <span class="eyebrow">01 — Primera visita</span>
+        <span class="eyebrow">01 — Cómo atendemos</span>
+        <h2>Teleconsulta: nuestro canal principal</h2>
+        <p style="margin-bottom:var(--space-6);">Valoración, plan y seguimiento por videollamada, con la misma calidad de atención que una consulta presencial y sin necesidad de desplazamiento.</p>
+        <ul class="check-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Videollamada segura desde cualquier dispositivo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mismo formato de valoración y ajuste de plan</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ideal para primeras visitas y revisiones periódicas</li>
+        </ul>
+        <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
+      </div>
+      <div class="split-media reveal">
+        <img src="./assets/app-preview.png" alt="Concepto de seguimiento nutricional desde el móvil" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset" id="valoracion">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">02 — Primera visita</span>
         <h2>Valoración nutricional completa</h2>
         <p style="margin-bottom:var(--space-6);">Revisamos tu historia clínica, antecedentes, medicación habitual y hábitos alimentarios. Incluye valoración antropométrica y, cuando es relevante, revisión de analíticas recientes.</p>
         <ul class="check-list">
@@ -91,13 +111,13 @@
     </div>
   </section>
 
-  <section class="section section--offset" id="planes">
+  <section class="section" id="planes">
     <div class="wrap split reverse">
       <div class="split-media reveal">
         <img src="./assets/plan.png" alt="Planificación semanal de comidas con ingredientes naturales sobre una mesa de madera" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="eyebrow">02 — Plan de alimentación</span>
+        <span class="eyebrow">03 — Plan de alimentación</span>
         <h2>Planes personalizados, no plantillas</h2>
         <p style="margin-bottom:var(--space-6);">A partir de la valoración, se diseña un plan de alimentación adaptado a tu situación clínica, tus gustos, tu presupuesto y tu rutina diaria — con raciones y sustituciones claras.</p>
         <ul class="check-list">
@@ -110,10 +130,10 @@
     </div>
   </section>
 
-  <section class="section" id="seguimiento">
+  <section class="section section--offset" id="seguimiento">
     <div class="wrap">
       <div class="header-block center">
-        <span class="eyebrow" style="justify-content:center;">03 — Continuidad</span>
+        <span class="eyebrow" style="justify-content:center;">04 — Continuidad</span>
         <h2>Seguimiento y control</h2>
         <p>El plan se revisa y ajusta con el tiempo, no se entrega y se olvida.</p>
       </div>
@@ -137,25 +157,6 @@
     </div>
   </section>
 
-  <section class="section section--offset" id="teleconsulta">
-    <div class="wrap split">
-      <div class="reveal">
-        <span class="eyebrow">04 — Flexibilidad</span>
-        <h2>Teleconsulta cuando la necesites</h2>
-        <p style="margin-bottom:var(--space-6);">Las visitas de seguimiento pueden realizarse por videollamada, manteniendo la misma calidad de atención sin necesidad de desplazamiento.</p>
-        <ul class="check-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Videollamada segura desde cualquier dispositivo</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mismo formato de valoración y ajuste de plan</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ideal para revisiones periódicas</li>
-        </ul>
-        <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
-      </div>
-      <div class="split-media reveal">
-        <img src="./assets/app-preview.png" alt="Concepto de seguimiento nutricional desde el móvil" loading="lazy">
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="wrap">
       <div class="cta-band reveal">
@@ -173,24 +174,24 @@
             <img class="brand-mark" src="./assets/logo-icon.png" alt="" width="34" height="34">
             <span class="brand-name">Minutrisalud</span>
           </a>
-          <p>Consulta de nutrición clínica personalizada: valoración, planes de alimentación y seguimiento con respaldo médico.</p>
+          <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento — también presencial si lo prefieres.</p>
         </div>
         <div>
           <h4>Navegación</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
             <li><a href="app.html">App Minutrisalud</a></li>
           </ul>
         </div>
         <div>
           <h4>Servicios</h4>
           <ul>
+            <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
             <li><a href="servicios.html#valoracion">Valoración nutricional</a></li>
             <li><a href="servicios.html#planes">Planes personalizados</a></li>
             <li><a href="servicios.html#seguimiento">Seguimiento y control</a></li>
-            <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
           </ul>
         </div>
         <div>

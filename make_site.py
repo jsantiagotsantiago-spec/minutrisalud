@@ -26,25 +26,25 @@ index_body = f'''
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Consulta de nutrición clínica</span>
-        <h1>Nutrición con criterio médico, hecha a tu medida</h1>
-        <p class="lede">Minutrisalud acompaña tu alimentación con valoración clínica, planes personalizados y seguimiento cercano — presencial o por teleconsulta.</p>
+        <span class="eyebrow">Consulta de nutrición online</span>
+        <h1>Nutrición con criterio médico, sin salir de casa</h1>
+        <p class="lede">Minutrisalud te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano. También disponible de forma presencial si lo prefieres.</p>
         <div class="hero-actions">
-          <a href="contacto.html" class="btn btn--primary">Reservar primera consulta</a>
+          <a href="contacto.html" class="btn btn--primary">Reservar consulta online</a>
           <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
         </div>
         <div class="hero-stats">
           <div>
-            <span class="stat-num">+10</span>
-            <span class="stat-label">años de práctica clínica</span>
+            <span class="stat-num">Online</span>
+            <span class="stat-label">consulta principal, por videollamada</span>
+          </div>
+          <div>
+            <span class="stat-num">3</span>
+            <span class="stat-label">profesionales: medicina y nutrición</span>
           </div>
           <div>
             <span class="stat-num">100%</span>
             <span class="stat-label">planes individualizados</span>
-          </div>
-          <div>
-            <span class="stat-num">Online</span>
-            <span class="stat-label">y presencial</span>
           </div>
         </div>
       </div>
@@ -86,12 +86,12 @@ index_body = f'''
       <div class="reveal">
         <span class="eyebrow">Por qué Minutrisalud</span>
         <h2>La nutrición como parte de tu tratamiento, no aparte de él</h2>
-        <p style="margin-bottom:var(--space-6);">Detrás de cada recomendación hay criterio médico: se tienen en cuenta tus antecedentes, tu medicación y tus analíticas, coordinando la alimentación con el resto de tu cuidado.</p>
+        <p style="margin-bottom:var(--space-6);">Detrás de cada recomendación hay criterio médico: se tienen en cuenta tus antecedentes, tu medicación y tus analíticas, coordinando la alimentación con el resto de tu cuidado — todo por videollamada, sin desplazamientos.</p>
         <ul class="check-list">
+          <li>{CHECK} Atención principalmente online, por videollamada segura</li>
+          <li>{CHECK} Equipo con médico y nutricionistas coordinados</li>
           <li>{CHECK} Valoración nutricional con base clínica, no solo estética</li>
-          <li>{CHECK} Coordinación con otras especialidades cuando es necesario</li>
           <li>{CHECK} Planes realistas, revisables y sin prohibiciones absolutas</li>
-          <li>{CHECK} Teleconsulta disponible para el seguimiento</li>
         </ul>
       </div>
       <div class="split-media reveal">
@@ -110,7 +110,7 @@ index_body = f'''
         <div class="step reveal">
           <span class="step-num">01</span>
           <h3>Reserva</h3>
-          <p style="font-size:var(--text-sm);">Eliges cita presencial o por videollamada según tu disponibilidad.</p>
+          <p style="font-size:var(--text-sm);">Eliges cita por videollamada (o presencial si lo prefieres) según tu disponibilidad.</p>
         </div>
         <div class="step reveal">
           <span class="step-num">02</span>
@@ -162,7 +162,7 @@ index_body = f'''
         <h2>Empecemos por entender cómo comes hoy</h2>
         <p style="max-width:520px;margin-inline:auto;margin-bottom:var(--space-6);">Reserva tu primera valoración y recibe un plan pensado para tu salud, no para una talla.</p>
         <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-          <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Reservar consulta</a>
+          <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Reservar consulta online</a>
           <a href="servicios.html" class="btn btn--ghost">Ver todos los servicios</a>
         </div>
       </div>
@@ -172,8 +172,8 @@ index_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/index.html",
-    "Minutrisalud — Consulta de nutrición clínica personalizada",
-    "Minutrisalud: consulta de nutrición con criterio médico. Valoración, planes personalizados y seguimiento presencial o por teleconsulta.",
+    "Minutrisalud — Consulta de nutrición online con criterio médico",
+    "Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento — también presencial si lo prefieres.",
     "Inicio",
     index_body,
 )
@@ -187,15 +187,34 @@ servicios_body = f'''
   <section class="page-hero">
     <div class="wrap wrap--narrow">
       <span class="eyebrow" style="justify-content:center;">Servicios</span>
-      <h1>Consulta de nutrición, paso a paso</h1>
-      <p class="lede" style="margin-inline:auto;text-align:center;">Cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado.</p>
+      <h1>Consulta de nutrición online, paso a paso</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Atendemos principalmente por videollamada; cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado. También disponible de forma presencial si lo prefieres.</p>
     </div>
   </section>
 
-  <section class="section" id="valoracion">
+  <section class="section" id="teleconsulta">
     <div class="wrap split">
       <div class="reveal">
-        <span class="eyebrow">01 — Primera visita</span>
+        <span class="eyebrow">01 — Cómo atendemos</span>
+        <h2>Teleconsulta: nuestro canal principal</h2>
+        <p style="margin-bottom:var(--space-6);">Valoración, plan y seguimiento por videollamada, con la misma calidad de atención que una consulta presencial y sin necesidad de desplazamiento.</p>
+        <ul class="check-list">
+          <li>{CHECK} Videollamada segura desde cualquier dispositivo</li>
+          <li>{CHECK} Mismo formato de valoración y ajuste de plan</li>
+          <li>{CHECK} Ideal para primeras visitas y revisiones periódicas</li>
+        </ul>
+        <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
+      </div>
+      <div class="split-media reveal">
+        <img src="./assets/app-preview.png" alt="Concepto de seguimiento nutricional desde el móvil" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset" id="valoracion">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">02 — Primera visita</span>
         <h2>Valoración nutricional completa</h2>
         <p style="margin-bottom:var(--space-6);">Revisamos tu historia clínica, antecedentes, medicación habitual y hábitos alimentarios. Incluye valoración antropométrica y, cuando es relevante, revisión de analíticas recientes.</p>
         <ul class="check-list">
@@ -211,13 +230,13 @@ servicios_body = f'''
     </div>
   </section>
 
-  <section class="section section--offset" id="planes">
+  <section class="section" id="planes">
     <div class="wrap split reverse">
       <div class="split-media reveal">
         <img src="./assets/plan.png" alt="Planificación semanal de comidas con ingredientes naturales sobre una mesa de madera" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="eyebrow">02 — Plan de alimentación</span>
+        <span class="eyebrow">03 — Plan de alimentación</span>
         <h2>Planes personalizados, no plantillas</h2>
         <p style="margin-bottom:var(--space-6);">A partir de la valoración, se diseña un plan de alimentación adaptado a tu situación clínica, tus gustos, tu presupuesto y tu rutina diaria — con raciones y sustituciones claras.</p>
         <ul class="check-list">
@@ -230,10 +249,10 @@ servicios_body = f'''
     </div>
   </section>
 
-  <section class="section" id="seguimiento">
+  <section class="section section--offset" id="seguimiento">
     <div class="wrap">
       <div class="header-block center">
-        <span class="eyebrow" style="justify-content:center;">03 — Continuidad</span>
+        <span class="eyebrow" style="justify-content:center;">04 — Continuidad</span>
         <h2>Seguimiento y control</h2>
         <p>El plan se revisa y ajusta con el tiempo, no se entrega y se olvida.</p>
       </div>
@@ -257,25 +276,6 @@ servicios_body = f'''
     </div>
   </section>
 
-  <section class="section section--offset" id="teleconsulta">
-    <div class="wrap split">
-      <div class="reveal">
-        <span class="eyebrow">04 — Flexibilidad</span>
-        <h2>Teleconsulta cuando la necesites</h2>
-        <p style="margin-bottom:var(--space-6);">Las visitas de seguimiento pueden realizarse por videollamada, manteniendo la misma calidad de atención sin necesidad de desplazamiento.</p>
-        <ul class="check-list">
-          <li>{CHECK} Videollamada segura desde cualquier dispositivo</li>
-          <li>{CHECK} Mismo formato de valoración y ajuste de plan</li>
-          <li>{CHECK} Ideal para revisiones periódicas</li>
-        </ul>
-        <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
-      </div>
-      <div class="split-media reveal">
-        <img src="./assets/app-preview.png" alt="Concepto de seguimiento nutricional desde el móvil" loading="lazy">
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="wrap">
       <div class="cta-band reveal">
@@ -290,7 +290,7 @@ servicios_body = f'''
 build(
     "/home/user/workspace/minutrisalud/servicios.html",
     "Servicios — Minutrisalud",
-    "Valoración nutricional, planes de alimentación personalizados, seguimiento periódico y teleconsulta en Minutrisalud.",
+    "Teleconsulta como canal principal, valoración nutricional, planes de alimentación personalizados y seguimiento periódico en Minutrisalud.",
     "Servicios",
     servicios_body,
 )
@@ -298,32 +298,58 @@ print("servicios built")
 
 
 # ============================================================
-# SOBRE MÍ
+# EQUIPO
 # ============================================================
 sobre_body = f'''
   <section class="page-hero">
     <div class="wrap wrap--narrow">
-      <span class="eyebrow" style="justify-content:center;">Sobre mí</span>
-      <h1>Medicina interna y nutrición clínica</h1>
+      <span class="eyebrow" style="justify-content:center;">Equipo</span>
+      <h1>Medicina interna y nutrición clínica, coordinadas</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Un equipo de tres profesionales que atiende principalmente por teleconsulta, para que la valoración médica y el seguimiento nutricional vayan siempre de la mano.</p>
     </div>
   </section>
 
   <section class="section">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <div class="card team-card reveal">
+          <div class="team-avatar">JS</div>
+          <span class="team-role">Medicina interna</span>
+          <h3>Dr. Jesús Santiago</h3>
+          <p>Coordinación médica de Minutrisalud. Aporta la valoración clínica de base — antecedentes, medicación y analíticas — sobre la que se construye cada plan de alimentación.</p>
+        </div>
+        <div class="card team-card reveal">
+          <div class="team-avatar">RS</div>
+          <span class="team-role">Nutricionista</span>
+          <h3>Raquel Santiago Carrasco</h3>
+          <p>Diseño de planes de alimentación personalizados y acompañamiento en el seguimiento nutricional, adaptados a la situación clínica y la rutina de cada paciente.</p>
+        </div>
+        <div class="card team-card reveal">
+          <div class="team-avatar">SM</div>
+          <span class="team-role">Nutricionista</span>
+          <h3>Saida Mohamed Mohamed</h3>
+          <p>Valoración nutricional y consulta de seguimiento, con atención cercana a las revisiones periódicas y al ajuste continuado de los planes.</p>
+        </div>
+      </div>
+      <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-8);text-align:center;">Estos perfiles son orientativos y pueden ampliarse con formación específica, colegiatura y años de experiencia de cada profesional.</p>
+    </div>
+  </section>
+
+  <section class="section section--offset">
     <div class="wrap split">
       <div class="split-media reveal">
         <img src="./assets/consulta.png" alt="Espacio de consulta con ambiente cálido y natural" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="eyebrow">Trayectoria</span>
-        <h2>Dr. Jesús Santiago</h2>
-        <p style="margin-bottom:var(--space-4);">Médico especialista en Medicina Interna, con dedicación particular a la nutrición clínica como parte del abordaje integral del paciente. Minutrisalud nace de la idea de que la alimentación es una herramienta terapéutica más, y que funciona mejor cuando se apoya en criterio médico y seguimiento cercano.</p>
-        <p>A lo largo de la práctica clínica diaria, esta mirada se ha aplicado tanto en pacientes con patologías crónicas como en personas que simplemente buscan mejorar sus hábitos con acompañamiento profesional.</p>
-        <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-6);">Este perfil es orientativo y puede ampliarse con formación específica, colegiatura y años de experiencia.</p>
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>La alimentación, una herramienta terapéutica más</h2>
+        <p style="margin-bottom:var(--space-4);">Minutrisalud nace de la idea de que la nutrición funciona mejor cuando se apoya en criterio médico y seguimiento cercano. El equipo atiende principalmente por videollamada, coordinando la mirada médica y nutricional en cada valoración, plan y revisión.</p>
+        <p>Esta forma de trabajar se aplica tanto en pacientes con patologías crónicas como en quienes buscan mejorar sus hábitos con acompañamiento profesional.</p>
       </div>
     </div>
   </section>
 
-  <section class="section section--offset">
+  <section class="section">
     <div class="wrap">
       <div class="header-block center">
         <span class="eyebrow" style="justify-content:center;">Enfoque</span>
@@ -349,11 +375,11 @@ sobre_body = f'''
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section--offset">
     <div class="wrap">
       <div class="quote-block reveal" style="max-width:720px;margin-inline:auto;text-align:center;border-left:none;">
-        <p>“Mi objetivo no es que sigas una dieta perfecta durante dos semanas, sino que comas mejor durante años.”</p>
-        <span class="quote-cite">Dr. Jesús Santiago</span>
+        <p>“Nuestro objetivo no es que sigas una dieta perfecta durante dos semanas, sino que comas mejor durante años — con el equipo médico y nutricional acompañándote por videollamada.”</p>
+        <span class="quote-cite">Equipo Minutrisalud</span>
       </div>
     </div>
   </section>
@@ -362,20 +388,20 @@ sobre_body = f'''
     <div class="wrap">
       <div class="cta-band reveal">
         <h2>¿Empezamos con tu valoración?</h2>
-        <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);margin-top:var(--space-4);">Reservar consulta</a>
+        <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);margin-top:var(--space-4);">Reservar consulta online</a>
       </div>
     </div>
   </section>
 '''
 
 build(
-    "/home/user/workspace/minutrisalud/sobre-mi.html",
-    "Sobre mí — Minutrisalud",
-    "Conoce el enfoque clínico y la trayectoria detrás de la consulta de nutrición Minutrisalud.",
-    "Sobre mí",
+    "/home/user/workspace/minutrisalud/equipo.html",
+    "Equipo — Minutrisalud",
+    "Conoce al equipo de Minutrisalud: medicina interna y nutrición clínica coordinadas, con atención principalmente online.",
+    "Equipo",
     sobre_body,
 )
-print("sobre-mi built")
+print("equipo built")
 
 
 # ============================================================
@@ -474,8 +500,8 @@ contacto_body = f'''
   <section class="page-hero">
     <div class="wrap wrap--narrow">
       <span class="eyebrow" style="justify-content:center;">Contacto</span>
-      <h1>Reserva tu consulta</h1>
-      <p class="lede" style="margin-inline:auto;text-align:center;">Escríbenos y te responderemos para concretar el formato (presencial o teleconsulta) y la fecha.</p>
+      <h1>Reserva tu consulta online</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Escríbenos y te responderemos para concretar tu videollamada. Si prefieres una visita presencial, también puedes indicarlo.</p>
     </div>
   </section>
 
@@ -499,10 +525,11 @@ contacto_body = f'''
             <div class="form-field full">
               <label for="service">Servicio de interés</label>
               <select id="service" name="service">
+                <option>Teleconsulta</option>
                 <option>Valoración nutricional inicial</option>
                 <option>Plan personalizado</option>
                 <option>Seguimiento</option>
-                <option>Teleconsulta</option>
+                <option>Consulta presencial</option>
                 <option>Otro</option>
               </select>
             </div>
@@ -520,6 +547,13 @@ contacto_body = f'''
         <div class="contact-info-card contact-info-list">
           <h3 style="margin-bottom:var(--space-5);">Información práctica</h3>
           <div class="contact-info-item">
+            <span class="contact-info-icon">{icon('video')}</span>
+            <div>
+              <strong>Modalidad</strong>
+              <p>Principalmente online, por videollamada. Consulta presencial disponible bajo petición.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
             <span class="contact-info-icon">{icon('mail')}</span>
             <div>
               <strong>Correo</strong>
@@ -536,8 +570,8 @@ contacto_body = f'''
           <div class="contact-info-item">
             <span class="contact-info-icon">{icon('pin')}</span>
             <div>
-              <strong>Ubicación</strong>
-              <p>Consulta presencial y teleconsulta — dirección a confirmar</p>
+              <strong>Ubicación (consulta presencial)</strong>
+              <p>Dirección a confirmar</p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -556,7 +590,7 @@ contacto_body = f'''
 build(
     "/home/user/workspace/minutrisalud/contacto.html",
     "Contacto — Minutrisalud",
-    "Reserva tu consulta de nutrición con Minutrisalud, presencial o por teleconsulta.",
+    "Reserva tu consulta de nutrición online con Minutrisalud, por videollamada; también disponible de forma presencial.",
     "Contacto",
     contacto_body,
 )
