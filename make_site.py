@@ -15,6 +15,11 @@ def icon(name):
         "pin": '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
         "clock": '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg>',
         "smartphone": '<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>',
+        "droplet": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5s7 7.5 7 12.5a7 7 0 0 1-14 0c0-5 7-12.5 7-12.5z"/></svg>',
+        "dumbbell": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 7v10M17.5 7v10M3 9.5v5M21 9.5v5M6.5 12h11"/></svg>',
+        "moon": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>',
+        "smile": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>',
+        "shield": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg>',
     }
     return icons[name]
 
@@ -175,6 +180,36 @@ index_body = f'''
     </div>
   </section>
 
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Consejos</span>
+        <h2>Hábitos saludables para el día a día</h2>
+        <p>Ideas prácticas de alimentación, movimiento y descanso, explicadas con criterio médico.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card-icon">{icon('leaf')}</div>
+          <h3>Alimentación</h3>
+          <p>Cómo construir un plato equilibrado sin contar calorías.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('dumbbell')}</div>
+          <h3>Movimiento</h3>
+          <p>Cuánta actividad física es realmente recomendable cada semana.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('moon')}</div>
+          <h3>Descanso</h3>
+          <p>Por qué dormir bien influye tanto en tu peso como en tu ánimo.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:var(--space-8);">
+        <a href="consejos.html" class="btn btn--ghost">Ver todos los consejos →</a>
+      </p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="app-teaser reveal">
@@ -330,6 +365,263 @@ build(
     servicios_body,
 )
 print("servicios built")
+
+
+# ============================================================
+# CONSEJOS
+# ============================================================
+consejos_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Consejos</span>
+      <h1>Nutrición y hábitos saludables, explicados con criterio médico</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Recomendaciones generales para el día a día, basadas en pautas de salud pública ampliamente aceptadas. No sustituyen una valoración individualizada — para tu caso concreto, lo mejor es una consulta.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="reveal">
+        <span class="eyebrow">Antes de empezar</span>
+        <h2>Pequeños cambios, sostenidos en el tiempo</h2>
+        <p style="margin-bottom:var(--space-6);">La mayoría de mejoras reales en salud no vienen de dietas estrictas de corta duración, sino de hábitos sencillos que se mantienen: comer de forma más natural, moverse un poco cada día, dormir lo suficiente y cuidar el estado de ánimo. Aquí reunimos ideas prácticas organizadas por tema; explora las que más te interesen.</p>
+        <ul class="check-list">
+          <li>{CHECK} Contenido informativo, revisado con criterio clínico</li>
+          <li>{CHECK} Pensado para el día a día, sin promesas milagrosas</li>
+          <li>{CHECK} Complementario a tu valoración individual en consulta</li>
+        </ul>
+      </div>
+      <div class="split-media reveal">
+        <img src="./assets/consejos.png" alt="Bowl de ensalada fresca junto a una botella de agua, una libreta y zapatillas de deporte sobre una mesa de madera" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Explora por tema</span>
+        <h2>Consejos por categoría</h2>
+        <p>Pulsa un tema para filtrar, o abre cada tarjeta para leer el consejo completo.</p>
+      </div>
+
+      <div class="tip-filters" role="tablist" aria-label="Filtrar consejos por categoría">
+        <button class="filter-pill is-active" data-filter="all" type="button">Todos</button>
+        <button class="filter-pill" data-filter="alimentacion" type="button">Alimentación</button>
+        <button class="filter-pill" data-filter="hidratacion" type="button">Hidratación</button>
+        <button class="filter-pill" data-filter="ejercicio" type="button">Ejercicio</button>
+        <button class="filter-pill" data-filter="sueno" type="button">Sueño</button>
+        <button class="filter-pill" data-filter="emocional" type="button">Bienestar emocional</button>
+        <button class="filter-pill" data-filter="habitos" type="button">Hábitos generales</button>
+      </div>
+
+      <div class="tip-grid">
+        <details class="tip-card reveal" data-category="alimentacion">
+          <summary>
+            <span class="tip-card-icon">{icon('leaf')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Alimentación</span>
+              <strong>Construye tu plato con la regla del plato saludable</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Divide el plato en tres partes: la mitad con verduras y hortalizas variadas, un cuarto con proteína (legumbres, pescado, huevo o carnes magras) y un cuarto con cereales integrales o tubérculos. Usa aceite de oliva como grasa principal. Es una guía visual sencilla, sin necesidad de contar calorías.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="alimentacion">
+          <summary>
+            <span class="tip-card-icon">{icon('leaf')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Alimentación</span>
+              <strong>Reduce ultraprocesados y azúcares añadidos</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Cuanto más larga y difícil de leer sea la lista de ingredientes de un producto, más probable es que sea ultraprocesado. Prioriza alimentos reconocibles — fruta, verdura, legumbres, frutos secos, pescado — frente a bollería, snacks y refrescos, que aportan muchas calorías con poco valor nutricional.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="alimentacion">
+          <summary>
+            <span class="tip-card-icon">{icon('leaf')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Alimentación</span>
+              <strong>Cocina en casa con más frecuencia</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Cocinar tus propias comidas te permite controlar la cantidad de sal, azúcar y grasa que añades, algo que no siempre es posible con la comida preparada o de restaurante. No hace falta que sea complicado: unas pocas recetas sencillas que domines bien ya marcan una diferencia notable.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="hidratacion">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('droplet')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Hidratación</span>
+              <strong>Bebe agua de forma regular, no solo cuando tengas sed</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">La sensación de sed aparece cuando ya existe cierto grado de deshidratación. Tener una botella de agua a la vista durante el día ayuda a recordar beber con regularidad, especialmente en épocas de calor o si haces ejercicio.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="hidratacion">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('droplet')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Hidratación</span>
+              <strong>El agua es la mejor bebida del día</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Los refrescos, zumos envasados y bebidas energéticas suelen aportar mucho azúcar con muy pocos nutrientes. El agua, con o sin gas, sigue siendo la opción más recomendable para mantenerte hidratado a lo largo del día.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="ejercicio">
+          <summary>
+            <span class="tip-card-icon">{icon('dumbbell')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Ejercicio</span>
+              <strong>Muévete al menos 150 minutos a la semana</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Caminar rápido, ir en bicicleta o nadar son buenas opciones de actividad aeróbica moderada. Repartir estos minutos en varios días de la semana, en lugar de concentrarlos en uno solo, suele ser más sostenible y beneficioso.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="ejercicio">
+          <summary>
+            <span class="tip-card-icon">{icon('dumbbell')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Ejercicio</span>
+              <strong>Añade ejercicios de fuerza dos veces por semana</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Trabajar la musculatura con pesas, bandas elásticas o el propio peso corporal ayuda a proteger huesos y articulaciones con el paso de los años, y complementa muy bien al ejercicio aeróbico.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="ejercicio">
+          <summary>
+            <span class="tip-card-icon">{icon('dumbbell')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Ejercicio</span>
+              <strong>Rompe el sedentarismo cada hora</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Si tienes un trabajo de oficina, levantarte y caminar unos minutos cada hora reduce los riesgos asociados a pasar muchas horas sentado, incluso si ya cumples con tu actividad física recomendada el resto del día.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="sueno">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('moon')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Sueño</span>
+              <strong>Duerme entre 7 y 9 horas si eres adulto</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">El sueño insuficiente se asocia a mayor apetito, peor control del azúcar en sangre y más riesgo cardiovascular a largo plazo. Dormir bien es tan importante para tu salud como la alimentación o el ejercicio.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="sueno">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('moon')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Sueño</span>
+              <strong>Mantén horarios regulares</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Acostarte y levantarte a horas similares, incluso el fin de semana, ayuda a tu cuerpo a regular mejor su ritmo natural y mejora la calidad del descanso, más allá del número total de horas dormidas.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="sueno">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('moon')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Sueño</span>
+              <strong>Evita pantallas y comidas copiosas antes de dormir</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">La luz de móviles y pantallas, junto con cenas muy abundantes o tardías, dificultan conciliar el sueño. Intenta dejar una o dos horas de margen sin pantallas y cenar con moderación antes de acostarte.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="emocional">
+          <summary>
+            <span class="tip-card-icon">{icon('smile')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Bienestar emocional</span>
+              <strong>Dedica tiempo a gestionar el estrés</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Técnicas sencillas como la respiración consciente, el mindfulness o simplemente hacer pausas a lo largo del día ayudan a reducir el impacto del estrés crónico en el cuerpo, incluyendo su efecto en el apetito y el sueño.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="emocional">
+          <summary>
+            <span class="tip-card-icon">{icon('smile')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Bienestar emocional</span>
+              <strong>Cuida tus relaciones sociales</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">El apoyo de familia, amigos o comunidad es uno de los factores más protectores para la salud mental y física a largo plazo. Reservar tiempo para las relaciones que te importan no es un lujo, es parte del cuidado de tu salud.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="habitos">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('shield')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Hábitos generales</span>
+              <strong>Evita el tabaco y modera el alcohol</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Dejar de fumar es una de las medidas individuales con mayor impacto positivo en la salud, a cualquier edad. Si consumes alcohol, hazlo con moderación: no existe una cantidad "beneficiosa" que compense sus riesgos.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="habitos">
+          <summary>
+            <span class="tip-card-icon tip-card-icon--warm">{icon('shield')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Hábitos generales</span>
+              <strong>No te salgas de tus revisiones médicas periódicas</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">Muchas alteraciones de la tensión arterial, el colesterol o el azúcar en sangre no dan síntomas al principio. Los chequeos preventivos permiten detectarlas a tiempo, cuando son más fáciles de corregir con cambios sencillos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>¿Quieres un plan hecho a tu medida?</h2>
+        <p style="max-width:520px;margin-inline:auto;margin-bottom:var(--space-6);">Estos consejos son generales; en consulta valoramos tu historia clínica, tus analíticas y tu día a día para adaptarlos a ti.</p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Reservar consulta online</a>
+          <a href="precios.html" class="btn btn--ghost">Ver planes y precios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+'''
+
+build(
+    "/home/user/workspace/minutrisalud/consejos.html",
+    "Consejos — Nutrición y hábitos saludables | Minutrisalud",
+    "Consejos prácticos de nutrición, hidratación, ejercicio, sueño y bienestar emocional, explicados con criterio médico por el equipo de Minutrisalud.",
+    "Consejos",
+    consejos_body,
+)
+print("consejos built")
+
 
 
 # ============================================================

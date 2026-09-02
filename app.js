@@ -159,3 +159,23 @@
     form.reset();
   });
 })();
+
+// Consejos page — category filter pills
+(function () {
+  const filters = document.querySelectorAll('.tip-filters .filter-pill');
+  const cards = document.querySelectorAll('.tip-grid .tip-card');
+  if (!filters.length || !cards.length) return;
+
+  filters.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      filters.forEach((p) => p.classList.remove('is-active'));
+      pill.classList.add('is-active');
+      const filter = pill.dataset.filter;
+
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('is-filtered-out', !show);
+      });
+    });
+  });
+})();
