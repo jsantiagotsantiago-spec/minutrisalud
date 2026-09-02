@@ -3,6 +3,7 @@ import re
 NAV_ITEMS = [
     ("Inicio", "index.html"),
     ("Servicios", "servicios.html"),
+    ("Planes y precios", "precios.html"),
     ("Equipo", "equipo.html"),
     ("App Minutrisalud", "app.html"),
     ("Contacto", "contacto.html"),
@@ -76,6 +77,7 @@ FOOTER = f'''  <footer class="footer">
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="precios.html">Planes y precios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="app.html">App Minutrisalud</a></li>
           </ul>
@@ -87,6 +89,8 @@ FOOTER = f'''  <footer class="footer">
             <li><a href="servicios.html#valoracion">Valoración nutricional</a></li>
             <li><a href="servicios.html#planes">Planes personalizados</a></li>
             <li><a href="servicios.html#seguimiento">Seguimiento y control</a></li>
+            <li><a href="precios.html">Ver precios</a></li>
+            <li><a href="pago.html">Contratar y pagar</a></li>
           </ul>
         </div>
         <div>

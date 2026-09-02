@@ -131,6 +131,41 @@ index_body = f'''
     </div>
   </section>
 
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Planes y precios</span>
+        <h2>Elige el nivel de acompañamiento que necesitas</h2>
+        <p>Desde un plan generado al instante hasta la valoración conjunta con nutricionista y médico. Puedes empezar por el más sencillo y subir de nivel cuando lo necesites.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card pricing-card reveal">
+          <span class="pricing-name">Plan Digital</span>
+          <p class="pricing-tagline">Autogestionado, sin intervención profesional salvo que lo solicites</p>
+          <div class="pricing-amount"><strong>9,90 €</strong><span>/ mes, sin permanencia</span></div>
+          <p class="pricing-secondary">Introduces tus datos y la web genera tu plan al instante</p>
+          <a href="precios.html#planes" class="btn btn--ghost pricing-cta">Ver detalles</a>
+        </div>
+        <div class="card pricing-card pricing-card--featured reveal">
+          <span class="badge pricing-badge">Más solicitado</span>
+          <span class="pricing-name">Plan Nutrición Online</span>
+          <p class="pricing-tagline">Teleconsulta con nutricionista, incluye dietas especiales</p>
+          <div class="pricing-amount"><strong>45 €</strong><span>primera consulta</span></div>
+          <p class="pricing-secondary">Seguimientos desde 30 € · celiaquía, alergias e intolerancias sin coste adicional</p>
+          <a href="precios.html#planes" class="btn btn--primary pricing-cta">Ver detalles</a>
+        </div>
+        <div class="card pricing-card reveal">
+          <span class="pricing-name">Plan Médico + Nutrición</span>
+          <p class="pricing-tagline">Valoración conjunta cuando el caso necesita más precisión</p>
+          <div class="pricing-amount"><strong>89 €</strong><span>valoración inicial</span></div>
+          <p class="pricing-secondary">Seguimientos desde 49 € · nutricionista y médico internista coordinados</p>
+          <a href="precios.html#planes" class="btn btn--ghost pricing-cta">Ver detalles</a>
+        </div>
+      </div>
+      <p class="pricing-note">Precios orientativos 2026, a confirmar por el equipo antes de publicarse de forma definitiva. <a href="precios.html">Ver todos los planes y qué incluye cada uno →</a></p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap">
       <div class="quote-block reveal" style="max-width:720px;margin-inline:auto;text-align:center;border-left:none;">
@@ -295,6 +330,260 @@ build(
     servicios_body,
 )
 print("servicios built")
+
+
+# ============================================================
+# PRECIOS
+# ============================================================
+precios_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Planes y precios</span>
+      <h1>Un plan para cada nivel de acompañamiento</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Empieza por donde necesites: un plan automático al instante, una teleconsulta con nutricionista, o una valoración conjunta con nutricionista y médico. Puedes subir de nivel en cualquier momento.</p>
+    </div>
+  </section>
+
+  <section class="section" id="planes">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <div class="card pricing-card reveal">
+          <span class="pricing-name">Plan Digital</span>
+          <p class="pricing-tagline">100% autoguiado. Sin intervención de nutricionista ni médico, salvo que tú la solicites.</p>
+          <div class="pricing-amount"><strong>9,90 €</strong><span>/ mes, sin permanencia</span></div>
+          <p class="pricing-secondary">También disponible por 89 €/año (equivale a 2 meses gratis)</p>
+          <ul class="pricing-list">
+            <li>{CHECK} Introduces tus datos: peso, altura, medidas, patologías previas y tratamiento actual</li>
+            <li>{CHECK} La web genera tu plan nutricional completo al instante</li>
+            <li>{CHECK} Seguimiento automatizado con ajustes periódicos según tu evolución</li>
+            <li>{CHECK} Puedes solicitar consulta con nutricionista o médico en cualquier momento</li>
+          </ul>
+          <a href="pago.html?plan=digital" class="btn btn--ghost pricing-cta">Contratar Plan Digital</a>
+        </div>
+
+        <div class="card pricing-card pricing-card--featured reveal">
+          <span class="badge pricing-badge">Más solicitado</span>
+          <span class="pricing-name">Plan Nutrición Online</span>
+          <p class="pricing-tagline">Teleconsulta con nutricionista para recomendaciones según tus patologías.</p>
+          <div class="pricing-amount"><strong>45 €</strong><span>primera consulta (45-60 min)</span></div>
+          <p class="pricing-secondary">Seguimientos desde 30 € · Bono 4 seguimientos: 110 €</p>
+          <ul class="pricing-list">
+            <li>{CHECK} Videoconsulta con nutricionista colegiada</li>
+            <li>{CHECK} Valoración según tus patologías y objetivos</li>
+            <li>{CHECK} Dieta adaptada a necesidades especiales: celiaquía, alergias, intolerancias u otras, sin coste adicional</li>
+            <li>{CHECK} Si se necesita una valoración clínica más precisa, se deriva a consulta médica</li>
+          </ul>
+          <a href="pago.html?plan=nutricion" class="btn btn--primary pricing-cta">Contratar Plan Nutrición</a>
+        </div>
+
+        <div class="card pricing-card reveal">
+          <span class="pricing-name">Plan Médico + Nutrición</span>
+          <p class="pricing-tagline">Valoración conjunta con nutricionista y médico internista para casos que necesitan más precisión.</p>
+          <div class="pricing-amount"><strong>89 €</strong><span>valoración inicial conjunta</span></div>
+          <p class="pricing-secondary">Seguimientos desde 49 € · incluye coordinación entre especialidades</p>
+          <ul class="pricing-list">
+            <li>{CHECK} Teleconsulta con médico internista además de nutricionista</li>
+            <li>{CHECK} Valoración clínica más precisa: antecedentes, medicación y analíticas</li>
+            <li>{CHECK} Plan de alimentación y, si procede, orientación terapéutica coordinada</li>
+            <li>{CHECK} Seguimiento combinado entre ambas especialidades</li>
+          </ul>
+          <a href="pago.html?plan=medico" class="btn btn--ghost pricing-cta">Contratar Plan Médico</a>
+        </div>
+      </div>
+
+      <div class="pricing-flow reveal">
+        <span class="pricing-flow-step">1. Plan Digital</span>
+        <span class="pricing-flow-arrow">→</span>
+        <span class="pricing-flow-step">2. ¿No es suficiente? Nutrición Online</span>
+        <span class="pricing-flow-arrow">→</span>
+        <span class="pricing-flow-step">3. ¿Necesitas más precisión? Médico + Nutrición</span>
+      </div>
+
+      <p class="pricing-note">Precios orientativos para 2026, calculados a partir de tarifas de mercado de servicios equivalentes. Deben confirmarse y ajustarse antes de la publicación definitiva. El pago se realiza de forma segura al contratar cada plan.</p>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Preguntas frecuentes</span>
+        <h2>Sobre los planes y el pago</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card-icon">{icon('scale')}</div>
+          <h3>¿Puedo cambiar de plan?</h3>
+          <p>Sí. Puedes empezar por el Plan Digital y pasar a una teleconsulta con nutricionista o médico cuando lo necesites, sin perder tus datos ya introducidos.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('leaf')}</div>
+          <h3>¿Las dietas especiales tienen coste extra?</h3>
+          <p>No. La adaptación a celiaquía, alergias, intolerancias u otras necesidades especiales está incluida en el Plan Nutrición Online y en el Plan Médico + Nutrición.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('video')}</div>
+          <h3>¿Cómo se realiza el pago?</h3>
+          <p>El pago se gestiona de forma segura al contratar el plan, antes de la teleconsulta o de recibir el plan automatizado. Aceptamos tarjeta de crédito y débito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>¿Con qué plan quieres empezar?</h2>
+        <p style="max-width:520px;margin-inline:auto;margin-bottom:var(--space-6);">Elige tu plan y accede a la pasarela de pago segura para contratarlo.</p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="pago.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Ir a la plataforma de pago</a>
+          <a href="contacto.html" class="btn btn--ghost">Tengo dudas antes de contratar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+'''
+
+build(
+    "/home/user/workspace/minutrisalud/precios.html",
+    "Planes y precios — Minutrisalud",
+    "Compara los planes de Minutrisalud: Plan Digital autoguiado, Plan Nutrición Online con teleconsulta y dietas especiales, y Plan Médico + Nutrición con valoración conjunta.",
+    "Planes y precios",
+    precios_body,
+)
+print("precios built")
+
+# ============================================================
+# PAGO (plataforma de pago)
+# ============================================================
+pago_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Plataforma de pago</span>
+      <h1>Contrata tu plan de forma segura</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Elige el plan, revisa el resumen y confirma el pago. Recibirás la confirmación por correo y, según el plan, accederás a tu cuestionario, a la reserva de videollamada o a ambos.</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="demo-banner">
+        {icon('phone')}
+        <span>Esta es una vista de demostración de la plataforma de pago. La pasarela de cobro real (tarjeta) se activará antes de publicar la web de forma definitiva; de momento, al confirmar se registra tu solicitud y el equipo te contacta para finalizar el pago.</span>
+      </div>
+
+      <div class="checkout-grid">
+        <div class="reveal">
+          <form id="checkout-form" class="form">
+            <h3 style="margin-bottom:var(--space-5);">1. Elige tu plan</h3>
+            <div class="plan-options">
+              <label class="plan-option">
+                <input type="radio" name="plan" value="digital" data-price="9,90 €/mes" data-label="Plan Digital">
+                <div class="plan-option-body">
+                  <strong>Plan Digital</strong>
+                  <span>Autoguiado, sin intervención profesional salvo que la solicites</span>
+                </div>
+                <span class="plan-option-price">9,90 €/mes</span>
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="nutricion" data-price="45 €" data-label="Plan Nutrición Online" checked>
+                <div class="plan-option-body">
+                  <strong>Plan Nutrición Online</strong>
+                  <span>Teleconsulta con nutricionista, incluye dietas especiales</span>
+                </div>
+                <span class="plan-option-price">45 €</span>
+              </label>
+              <label class="plan-option">
+                <input type="radio" name="plan" value="medico" data-price="89 €" data-label="Plan Médico + Nutrición">
+                <div class="plan-option-body">
+                  <strong>Plan Médico + Nutrición</strong>
+                  <span>Valoración conjunta con nutricionista y médico internista</span>
+                </div>
+                <span class="plan-option-price">89 €</span>
+              </label>
+            </div>
+
+            <hr class="form-divider">
+
+            <h3 style="margin-bottom:var(--space-5);">2. Tus datos</h3>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="pago-name">Nombre completo</label>
+                <input type="text" id="pago-name" name="name" required placeholder="Tu nombre">
+              </div>
+              <div class="form-field">
+                <label for="pago-email">Correo electrónico</label>
+                <input type="email" id="pago-email" name="email" required placeholder="tu@email.com">
+              </div>
+              <div class="form-field full">
+                <label for="pago-phone">Teléfono</label>
+                <input type="tel" id="pago-phone" name="phone" required placeholder="+34 600 000 000">
+              </div>
+            </div>
+
+            <hr class="form-divider">
+
+            <h3 style="margin-bottom:var(--space-5);">3. Pago</h3>
+            <div class="form-grid">
+              <div class="form-field full">
+                <label for="pago-card">Número de tarjeta</label>
+                <input type="text" id="pago-card" name="card" inputmode="numeric" placeholder="0000 0000 0000 0000">
+              </div>
+              <div class="form-field">
+                <label for="pago-exp">Caducidad</label>
+                <input type="text" id="pago-exp" name="exp" placeholder="MM/AA">
+              </div>
+              <div class="form-field">
+                <label for="pago-cvc">CVC</label>
+                <input type="text" id="pago-cvc" name="cvc" inputmode="numeric" placeholder="123">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-6);">Confirmar y pagar</button>
+            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al confirmar, aceptas nuestros términos de servicio. Pago procesado de forma segura.</p>
+          </form>
+
+          <div id="checkout-success" class="card checkout-success reveal" hidden>
+            <div class="card-icon" style="margin:0 auto;">{icon('heart')}</div>
+            <h2>¡Solicitud recibida!</h2>
+            <p id="checkout-success-detail" style="max-width:420px;margin-inline:auto;"></p>
+            <a href="index.html" class="btn btn--ghost" style="margin-top:var(--space-6);">Volver al inicio</a>
+          </div>
+        </div>
+
+        <aside class="reveal">
+          <div class="order-summary">
+            <h3>Resumen del pedido</h3>
+            <div class="order-summary-row">
+              <span id="summary-plan-name">Plan Nutrición Online</span>
+              <span id="summary-plan-price">45 €</span>
+            </div>
+            <div class="order-summary-row">
+              <span>Impuestos</span>
+              <span>Incluidos</span>
+            </div>
+            <div class="order-summary-row total">
+              <span>Total hoy</span>
+              <span id="summary-total">45 €</span>
+            </div>
+            <div class="order-summary-note">
+              {icon('scale')}
+              <span>Los planes con teleconsulta se facturan por sesión; el Plan Digital se renueva mensualmente y puedes cancelarlo cuando quieras.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+'''
+
+build(
+    "/home/user/workspace/minutrisalud/pago.html",
+    "Pago y contratación — Minutrisalud",
+    "Contrata tu plan Minutrisalud de forma segura: Plan Digital, Plan Nutrición Online o Plan Médico + Nutrición.",
+    "Planes y precios",
+    pago_body,
+)
+print("pago built")
 
 
 # ============================================================

@@ -95,6 +95,63 @@
   });
 })();
 
+// Checkout form (pago.html — plan selector, live summary, mailto fallback, no real payment gateway wired yet)
+(function () {
+  const form = document.querySelector('#checkout-form');
+  if (!form) return;
+
+  const planName = document.querySelector('#summary-plan-name');
+  const planPrice = document.querySelector('#summary-plan-price');
+  const total = document.querySelector('#summary-total');
+  const radios = form.querySelectorAll('input[name="plan"]');
+
+  function preselectFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get('plan');
+    if (!plan) return;
+    const match = form.querySelector(`input[name="plan"][value="${plan}"]`);
+    if (match) match.checked = true;
+  }
+
+  function updateSummary() {
+    const checked = form.querySelector('input[name="plan"]:checked');
+    if (!checked) return;
+    planName.textContent = checked.dataset.label;
+    planPrice.textContent = checked.dataset.price;
+    total.textContent = checked.dataset.price;
+  }
+
+  preselectFromQuery();
+  updateSummary();
+  radios.forEach((r) => r.addEventListener('change', updateSummary));
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const checked = form.querySelector('input[name="plan"]:checked');
+    const data = new FormData(form);
+    const nombre = data.get('name') || '';
+    const email = data.get('email') || '';
+    const telefono = data.get('phone') || '';
+    const planLabel = checked ? checked.dataset.label : '';
+    const planPriceVal = checked ? checked.dataset.price : '';
+
+    const mailBody = encodeURIComponent(
+      `Nueva solicitud de contratación\nPlan: ${planLabel} (${planPriceVal})\nNombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}`
+    );
+    // No hay pasarela de pago real conectada todavía: se registra la solicitud por correo
+    // y el equipo confirma el cobro. Sustituir por la llamada al backend de pago cuando esté activo.
+    window.location.href = `mailto:hola@minutrisalud.com?subject=Solicitud%20de%20contrataci%C3%B3n%20-%20${encodeURIComponent(planLabel)}&body=${mailBody}`;
+
+    form.hidden = true;
+    const success = document.querySelector('#checkout-success');
+    const detail = document.querySelector('#checkout-success-detail');
+    if (success) success.hidden = false;
+    if (detail) {
+      detail.textContent = `Hemos registrado tu solicitud para el ${planLabel} (${planPriceVal}). Te contactaremos por correo o teléfono para confirmar el pago y los siguientes pasos.`;
+    }
+  });
+})();
+
 // Notify form (app teaser page — mailto fallback, no backend wired yet)
 (function () {
   const form = document.querySelector('#notify-form');
