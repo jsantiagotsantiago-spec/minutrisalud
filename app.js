@@ -129,26 +129,19 @@
     e.preventDefault();
     const checked = form.querySelector('input[name="plan"]:checked');
     const data = new FormData(form);
-    const nombre = data.get('name') || '';
-    const email = data.get('email') || '';
-    const telefono = data.get('phone') || '';
-    const planLabel = checked ? checked.dataset.label : '';
-    const planPriceVal = checked ? checked.dataset.price : '';
+    const email = (data.get('email') || '').trim();
+    const nombre = (data.get('name') || '').trim();
+    const paymentLink = checked ? checked.dataset.paymentLink : '';
 
-    const mailBody = encodeURIComponent(
-      `Nueva solicitud de contratación\nPlan: ${planLabel} (${planPriceVal})\nNombre: ${nombre}\nEmail: ${email}\nTeléfono: ${telefono}`
-    );
-    // No hay pasarela de pago real conectada todavía: se registra la solicitud por correo
-    // y el equipo confirma el cobro. Sustituir por la llamada al backend de pago cuando esté activo.
-    window.location.href = `mailto:hola@minutrisalud.com?subject=Solicitud%20de%20contrataci%C3%B3n%20-%20${encodeURIComponent(planLabel)}&body=${mailBody}`;
+    if (!paymentLink) return;
 
-    form.hidden = true;
-    const success = document.querySelector('#checkout-success');
-    const detail = document.querySelector('#checkout-success-detail');
-    if (success) success.hidden = false;
-    if (detail) {
-      detail.textContent = `Hemos registrado tu solicitud para el ${planLabel} (${planPriceVal}). Te contactaremos por correo o teléfono para confirmar el pago y los siguientes pasos.`;
-    }
+    // Redirige a la pasarela segura de Stripe (entorno de pruebas). Stripe recoge los
+    // datos de la tarjeta directamente en su página alojada; no pasan por nuestro servidor.
+    const url = new URL(paymentLink);
+    if (email) url.searchParams.set('prefilled_email', email);
+    if (nombre) url.searchParams.set('client_reference_id', nombre);
+
+    window.location.href = url.toString();
   });
 })();
 

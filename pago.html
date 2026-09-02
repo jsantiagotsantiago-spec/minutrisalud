@@ -79,7 +79,7 @@
     <div class="wrap">
       <div class="demo-banner">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1.1.4 2.1.7 3.1a2 2 0 0 1-.5 2.1L8 10.1a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .6 3.1.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span>Esta es una vista de demostración de la plataforma de pago. La pasarela de cobro real (tarjeta) se activará antes de publicar la web de forma definitiva; de momento, al confirmar se registra tu solicitud y el equipo te contacta para finalizar el pago.</span>
+        <span>Estás en el entorno de pruebas de nuestra pasarela de pago (Stripe Sandbox). Puedes completar todo el proceso, pero no se realizará ningún cargo real. Antes de publicar la web de forma definitiva, activaremos el modo de cobro real.</span>
       </div>
 
       <div class="checkout-grid">
@@ -88,7 +88,7 @@
             <h3 style="margin-bottom:var(--space-5);">1. Elige tu plan</h3>
             <div class="plan-options">
               <label class="plan-option">
-                <input type="radio" name="plan" value="digital" data-price="9,90 €/mes" data-label="Plan Digital">
+                <input type="radio" name="plan" value="digital" data-price="9,90 €/mes" data-label="Plan Digital" data-payment-link="https://buy.stripe.com/test_00waEYfqA8gZaN3aam5wI00">
                 <div class="plan-option-body">
                   <strong>Plan Digital</strong>
                   <span>Autoguiado, sin intervención profesional salvo que la solicites</span>
@@ -96,7 +96,7 @@
                 <span class="plan-option-price">9,90 €/mes</span>
               </label>
               <label class="plan-option">
-                <input type="radio" name="plan" value="nutricion" data-price="45 €" data-label="Plan Nutrición Online" checked>
+                <input type="radio" name="plan" value="nutricion" data-price="45 €" data-label="Plan Nutrición Online" data-payment-link="https://buy.stripe.com/test_dRmbJ24LW8gZ7AR2HU5wI01" checked>
                 <div class="plan-option-body">
                   <strong>Plan Nutrición Online</strong>
                   <span>Teleconsulta con nutricionista, incluye dietas especiales</span>
@@ -104,7 +104,7 @@
                 <span class="plan-option-price">45 €</span>
               </label>
               <label class="plan-option">
-                <input type="radio" name="plan" value="medico" data-price="89 €" data-label="Plan Médico + Nutrición">
+                <input type="radio" name="plan" value="medico" data-price="89 €" data-label="Plan Médico + Nutrición" data-payment-link="https://buy.stripe.com/test_eVq28s4LWfJr4oF6Ya5wI02">
                 <div class="plan-option-body">
                   <strong>Plan Médico + Nutrición</strong>
                   <span>Valoración conjunta con nutricionista y médico internista</span>
@@ -131,26 +131,8 @@
               </div>
             </div>
 
-            <hr class="form-divider">
-
-            <h3 style="margin-bottom:var(--space-5);">3. Pago</h3>
-            <div class="form-grid">
-              <div class="form-field full">
-                <label for="pago-card">Número de tarjeta</label>
-                <input type="text" id="pago-card" name="card" inputmode="numeric" placeholder="0000 0000 0000 0000">
-              </div>
-              <div class="form-field">
-                <label for="pago-exp">Caducidad</label>
-                <input type="text" id="pago-exp" name="exp" placeholder="MM/AA">
-              </div>
-              <div class="form-field">
-                <label for="pago-cvc">CVC</label>
-                <input type="text" id="pago-cvc" name="cvc" inputmode="numeric" placeholder="123">
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-6);">Confirmar y pagar</button>
-            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al confirmar, aceptas nuestros términos de servicio. Pago procesado de forma segura.</p>
+            <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-6);">Continuar al pago seguro</button>
+            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al pulsar, irás a la pasarela de pago de Stripe (entorno de pruebas) para introducir tus datos de tarjeta de forma segura. Minutrisalud nunca almacena los datos de tu tarjeta.</p>
           </form>
 
           <div id="checkout-success" class="card checkout-success reveal" hidden>
