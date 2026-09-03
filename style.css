@@ -340,6 +340,27 @@ p {
   color: var(--color-primary);
 }
 
+.btn--warm {
+  background: var(--color-warm);
+  color: var(--color-text-inverse);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--warm:hover {
+  filter: brightness(0.92);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn--arrow .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn--arrow:hover .arrow {
+  transform: translateX(3px);
+}
+
 .btn--sm {
   font-size: var(--text-xs);
   padding: 0.6em 1.2em;

@@ -35,7 +35,7 @@ index_body = f'''
         <h1>Nutrición con criterio médico, sin salir de casa</h1>
         <p class="lede">Minutrisalud te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano.</p>
         <div class="hero-actions">
-          <a href="contacto.html" class="btn btn--primary">Reservar consulta online</a>
+          <a href="contacto.html" class="btn btn--primary btn--arrow">Reservar consulta online <span class="arrow">→</span></a>
           <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
         </div>
         <div class="hero-stats">
@@ -205,7 +205,7 @@ index_body = f'''
         </div>
       </div>
       <p style="text-align:center;margin-top:var(--space-8);">
-        <a href="consejos.html" class="btn btn--ghost">Ver todos los consejos →</a>
+        <a href="consejos.html" class="btn btn--warm btn--arrow">Ver todos los consejos <span class="arrow">→</span></a>
       </p>
     </div>
   </section>
@@ -217,7 +217,7 @@ index_body = f'''
           <span class="badge">Próximamente</span>
           <h2>La app Minutrisalud está en camino</h2>
           <p>Estamos preparando una aplicación para llevar tu plan de alimentación, registrar tu seguimiento y comunicarte con la consulta desde el móvil.</p>
-          <a href="app.html" class="btn btn--ghost" style="margin-top:var(--space-4);width:fit-content;">Ver adelanto de la app</a>
+          <a href="app.html" class="btn btn--warm" style="margin-top:var(--space-4);width:fit-content;">Ver adelanto de la app</a>
         </div>
         <div class="app-teaser-media">
           <img src="./assets/app-preview.png" alt="Vista previa conceptual de la futura app Minutrisalud en un teléfono móvil" loading="lazy">
@@ -1016,7 +1016,7 @@ app_body = f'''
 
         2) Sustituir por botones de descarga (si es app nativa iOS/Android):
            <a href="https://apps.apple.com/..." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Descargar en App Store</a>
-           <a href="https://play.google.com/..." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Descargar en Google Play</a>
+           <a href="https://play.google.com/..." target="_blank" rel="noopener noreferrer" class="btn btn--warm">Descargar en Google Play</a>
 
         3) Insertar un widget/script embebido del proveedor de la app, si aplica.
 
