@@ -71,7 +71,7 @@ FOOTER = f'''  <footer class="footer">
             {BRAND_SVG}
             <span class="brand-name">Minutrisalud</span>
           </a>
-          <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento — también presencial si lo prefieres.</p>
+          <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento.</p>
         </div>
         <div>
           <h4>Navegación</h4>

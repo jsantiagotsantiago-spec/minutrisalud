@@ -33,7 +33,7 @@ index_body = f'''
       <div>
         <span class="eyebrow">Consulta de nutrición online</span>
         <h1>Nutrición con criterio médico, sin salir de casa</h1>
-        <p class="lede">Minutrisalud te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano. También disponible de forma presencial si lo prefieres.</p>
+        <p class="lede">Minutrisalud te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano.</p>
         <div class="hero-actions">
           <a href="contacto.html" class="btn btn--primary">Reservar consulta online</a>
           <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
@@ -115,7 +115,7 @@ index_body = f'''
         <div class="step reveal">
           <span class="step-num">01</span>
           <h3>Reserva</h3>
-          <p style="font-size:var(--text-sm);">Eliges cita por videollamada (o presencial si lo prefieres) según tu disponibilidad.</p>
+          <p style="font-size:var(--text-sm);">Eliges cita por videollamada según tu disponibilidad.</p>
         </div>
         <div class="step reveal">
           <span class="step-num">02</span>
@@ -243,7 +243,7 @@ index_body = f'''
 build(
     "/home/user/workspace/minutrisalud/index.html",
     "Minutrisalud — Consulta de nutrición online con criterio médico",
-    "Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento — también presencial si lo prefieres.",
+    "Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
     "Inicio",
     index_body,
 )
@@ -258,7 +258,7 @@ servicios_body = f'''
     <div class="wrap wrap--narrow">
       <span class="eyebrow" style="justify-content:center;">Servicios</span>
       <h1>Consulta de nutrición online, paso a paso</h1>
-      <p class="lede" style="margin-inline:auto;text-align:center;">Atendemos principalmente por videollamada; cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado. También disponible de forma presencial si lo prefieres.</p>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Atendemos por videollamada; cada servicio puede solicitarse de forma individual o como parte de un seguimiento continuado.</p>
     </div>
   </section>
 
@@ -276,7 +276,7 @@ servicios_body = f'''
         <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/app-preview.png" alt="Concepto de seguimiento nutricional desde el móvil" loading="lazy">
+        <img src="./assets/teleconsulta.png" alt="Tableta con videollamada de teleconsulta sobre una mesa de madera" loading="lazy">
       </div>
     </div>
   </section>
@@ -295,7 +295,7 @@ servicios_body = f'''
         </ul>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/consulta.png" alt="Mesa de consulta con cuaderno de notas y material de valoración" loading="lazy">
+        <img src="./assets/valoracion.png" alt="Mesa de valoración con cinta métrica, báscula y formulario clínico" loading="lazy">
       </div>
     </div>
   </section>
@@ -901,7 +901,7 @@ sobre_body = f'''
   <section class="section section--offset">
     <div class="wrap split">
       <div class="split-media reveal">
-        <img src="./assets/consulta.png" alt="Espacio de consulta con ambiente cálido y natural" loading="lazy">
+        <img src="./assets/equipo-espacio.png" alt="Espacio de trabajo cálido con ordenador en videollamada y cuaderno de notas" loading="lazy">
       </div>
       <div class="reveal">
         <span class="eyebrow">Cómo trabajamos</span>
@@ -1064,7 +1064,7 @@ contacto_body = f'''
     <div class="wrap wrap--narrow">
       <span class="eyebrow" style="justify-content:center;">Contacto</span>
       <h1>Reserva tu consulta online</h1>
-      <p class="lede" style="margin-inline:auto;text-align:center;">Escríbenos y te responderemos para concretar tu videollamada. Si prefieres una visita presencial, también puedes indicarlo.</p>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Escríbenos y te responderemos para concretar tu videollamada.</p>
     </div>
   </section>
 
@@ -1092,7 +1092,6 @@ contacto_body = f'''
                 <option>Valoración nutricional inicial</option>
                 <option>Plan personalizado</option>
                 <option>Seguimiento</option>
-                <option>Consulta presencial</option>
                 <option>Otro</option>
               </select>
             </div>
@@ -1113,7 +1112,7 @@ contacto_body = f'''
             <span class="contact-info-icon">{icon('video')}</span>
             <div>
               <strong>Modalidad</strong>
-              <p>Principalmente online, por videollamada. Consulta presencial disponible bajo petición.</p>
+              <p>Totalmente online, por videollamada.</p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -1127,14 +1126,7 @@ contacto_body = f'''
             <span class="contact-info-icon">{icon('phone')}</span>
             <div>
               <strong>Teléfono</strong>
-              <p>A confirmar</p>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <span class="contact-info-icon">{icon('pin')}</span>
-            <div>
-              <strong>Ubicación (consulta presencial)</strong>
-              <p>Dirección a confirmar</p>
+              <p><a href="tel:+34616412138">+34 616 41 21 38</a></p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -1153,7 +1145,7 @@ contacto_body = f'''
 build(
     "/home/user/workspace/minutrisalud/contacto.html",
     "Contacto — Minutrisalud",
-    "Reserva tu consulta de nutrición online con Minutrisalud, por videollamada; también disponible de forma presencial.",
+    "Reserva tu consulta de nutrición online con Minutrisalud, por videollamada.",
     "Contacto",
     contacto_body,
 )
