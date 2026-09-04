@@ -69,9 +69,16 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.05, rootMargin: '0px 0px -10% 0px' }
   );
   items.forEach((el) => io.observe(el));
+  // Safety net: some environments (embedded/sandboxed preview iframes, very fast
+  // scrolling, or anchor-jump navigation) can prevent the IntersectionObserver from
+  // firing for every element. Never let content stay permanently hidden.
+  setTimeout(() => {
+    items.forEach((el) => el.classList.add('is-visible'));
+    io.disconnect();
+  }, 1500);
 })();
 
 // Contact form (mailto fallback — no backend wired yet)
