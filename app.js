@@ -167,6 +167,95 @@
   });
 })();
 
+// Calculadora nutricional — IMC + estimación de gasto calórico
+// (reinterpretación propia con fórmulas clínicas actuales: SEEDO, Mifflin-St Jeor, FAO/OMS/UNU)
+(function () {
+  const form = document.querySelector('#calc-form');
+  const results = document.querySelector('#calc-results');
+  if (!form || !results) return;
+
+  const BMI_BANDS = [
+    { max: 18.5, label: 'Peso insuficiente', badge: 'warn', pos: 8 },
+    { max: 25, label: 'Normopeso', badge: 'good', pos: 30 },
+    { max: 27, label: 'Sobrepeso grado I', badge: 'warn', pos: 48 },
+    { max: 30, label: 'Sobrepeso grado II', badge: 'warn', pos: 58 },
+    { max: 35, label: 'Obesidad tipo I', badge: 'alert', pos: 70 },
+    { max: 40, label: 'Obesidad tipo II', badge: 'alert', pos: 82 },
+    { max: Infinity, label: 'Obesidad tipo III', badge: 'alert', pos: 94 },
+  ];
+
+  function classifyBMI(bmi) {
+    return BMI_BANDS.find((b) => bmi < b.max) || BMI_BANDS[BMI_BANDS.length - 1];
+  }
+
+  function fmt(n) {
+    return Math.round(n).toLocaleString('es-ES');
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const weight = parseFloat(document.querySelector('#calc-weight').value);
+    const heightCm = parseFloat(document.querySelector('#calc-height').value);
+    const age = parseFloat(document.querySelector('#calc-age').value);
+    const sex = form.querySelector('input[name="calc-sex"]:checked').value;
+    const activity = parseFloat(document.querySelector('#calc-activity').value);
+    const goal = document.querySelector('#calc-goal').value;
+
+    if (!weight || !heightCm || !age) return;
+
+    const heightM = heightCm / 100;
+    const bmi = weight / (heightM * heightM);
+    const band = classifyBMI(bmi);
+
+    // Ecuación de Mifflin-St Jeor (1990) para el metabolismo basal
+    const bmr =
+      sex === 'hombre'
+        ? 10 * weight + 6.25 * heightCm - 5 * age + 5
+        : 10 * weight + 6.25 * heightCm - 5 * age - 161;
+
+    const tdee = bmr * activity;
+    const deficit = Math.round((tdee - 500) / 10) * 10;
+    const surplus = Math.round((tdee + 350) / 10) * 10;
+    const maintain = Math.round(tdee / 10) * 10;
+
+    const goalValue = goal === 'perder' ? deficit : goal === 'ganar' ? surplus : maintain;
+    const goalLabel =
+      goal === 'perder' ? 'Para tu objetivo (déficit moderado)' : goal === 'ganar' ? 'Para tu objetivo (superávit moderado)' : 'Para tu objetivo (mantenimiento)';
+
+    results.innerHTML = `
+      <div class="calc-result-block">
+        <div class="calc-result-label">Tu índice de masa corporal</div>
+        <div class="calc-result-value">
+          <span class="num">${bmi.toFixed(1)}</span>
+          <span class="calc-badge calc-badge--${band.badge}">${band.label}</span>
+        </div>
+        <div class="calc-scale">
+          <div class="calc-scale-marker" style="left:${band.pos}%"></div>
+        </div>
+        <p class="calc-result-note">Clasificación según el consenso SEEDO para población adulta. No tiene en cuenta composición corporal ni perímetro de cintura.</p>
+      </div>
+      <div class="calc-result-block">
+        <div class="calc-result-label">Necesidad calórica diaria estimada</div>
+        <div class="calc-cal-grid">
+          <div class="calc-cal-item">
+            <strong>${fmt(maintain)} kcal</strong>
+            <span>Mantenimiento</span>
+          </div>
+          <div class="calc-cal-item is-goal">
+            <strong>${fmt(goalValue)} kcal</strong>
+            <span>${goalLabel}</span>
+          </div>
+        </div>
+        <p class="calc-result-note" style="margin-top:var(--space-4);">Estimación con la ecuación de Mifflin-St Jeor y tu nivel de actividad declarado. Los ajustes de peso reales dependen de muchos más factores; en consulta lo afinamos contigo.</p>
+      </div>
+    `;
+    results.querySelectorAll('.calc-result-block').forEach((el) => el.classList.add('reveal', 'is-visible'));
+    if (window.innerWidth < 860) {
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+})();
+
 // Consejos page — category filter pills
 (function () {
   const filters = document.querySelectorAll('.tip-filters .filter-pill');

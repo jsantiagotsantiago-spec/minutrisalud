@@ -4,6 +4,7 @@ NAV_ITEMS = [
     ("Inicio", "index.html"),
     ("Servicios", "servicios.html"),
     ("Consejos", "consejos.html"),
+    ("Calculadora", "calculadora.html"),
     ("Planes y precios", "precios.html"),
     ("Equipo", "equipo.html"),
     ("App Minutrisalud", "app.html"),
@@ -79,6 +80,7 @@ FOOTER = f'''  <footer class="footer">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="consejos.html">Consejos</a></li>
+            <li><a href="calculadora.html">Calculadora nutricional</a></li>
             <li><a href="precios.html">Planes y precios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="app.html">App Minutrisalud</a></li>

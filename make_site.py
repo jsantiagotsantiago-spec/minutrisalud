@@ -20,6 +20,10 @@ def icon(name):
         "moon": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>',
         "smile": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>',
         "shield": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg>',
+        "question": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a2.9 2.9 0 0 1 5.6 1c0 2-2.7 2.1-2.7 4.1"/><path d="M12 17.5h.01"/></svg>',
+        "notebook": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 3v18M9 8h7M9 12h7M9 16h5"/></svg>',
+        "calculator": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h1M12 10h1M16 10h1M8 14h1M12 14h1M16 14h1M8 18h1M12 18h1M16 18h1"/></svg>',
+        "flame": '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c1 3-3 4-3 8a3 3 0 0 0 6 0c0-1-.5-2-1-2 1.5 1.5 3 3.5 3 6a5 5 0 0 1-10 0c0-4.5 4-6 5-12z"/></svg>',
     }
     return icons[name]
 
@@ -413,6 +417,7 @@ consejos_body = f'''
         <button class="filter-pill" data-filter="sueno" type="button">Sueño</button>
         <button class="filter-pill" data-filter="emocional" type="button">Bienestar emocional</button>
         <button class="filter-pill" data-filter="habitos" type="button">Hábitos generales</button>
+        <button class="filter-pill" data-filter="mitos" type="button">Mitos y realidades</button>
       </div>
 
       <div class="tip-grid">
@@ -595,7 +600,105 @@ consejos_body = f'''
           </summary>
           <p class="tip-card-body">Muchas alteraciones de la tensión arterial, el colesterol o el azúcar en sangre no dan síntomas al principio. Los chequeos preventivos permiten detectarlas a tiempo, cuando son más fáciles de corregir con cambios sencillos.</p>
         </details>
+
+        <details class="tip-card reveal" data-category="alimentacion">
+          <summary>
+            <span class="tip-card-icon">{icon('notebook')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Alimentación</span>
+              <strong>Llevar un registro de lo que comes funciona, aunque sea unos días</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body">No hace falta contar calorías de por vida. Anotar durante 3-4 días lo que comes y bebes —en una libreta o en una app— suele revelar patrones que pasan desapercibidos: raciones más grandes de lo que creíamos, picoteos "invisibles" o comidas que se repiten sin planificarlo. Ese conocimiento, no la báscula ni la app en sí, es lo que ayuda a cambiar hábitos con criterio.</p>
+        </details>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Ideas que no siempre son ciertas</span>
+        <h2>Mitos y realidades sobre el peso y la alimentación</h2>
+        <p>Las dietas de moda cambian de nombre cada temporada, pero muchos de los mitos que las rodean se repiten desde hace décadas. Estos son algunos de los más frecuentes en consulta.</p>
+      </div>
+
+      <div class="tip-grid">
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"Las dietas cetogénicas adelgazan más que una dieta hipocalórica normal"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> a igualdad de déficit calórico, la grasa que se pierde es prácticamente la misma que con una alimentación equilibrada. Lo que cambia es que las cetogénicas pierden más agua y masa muscular al principio, lo que da una sensación de "resultado rápido" en la báscula. Además, mantenidas mucho tiempo pueden elevar el colesterol y el ácido úrico, y suelen ser bajas en fibra.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"No hay que mezclar proteínas con hidratos en la misma comida"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> es la base de las llamadas dietas disociadas, y no tiene respaldo científico. Nuestro sistema digestivo está perfectamente capacitado para procesar proteínas e hidratos a la vez; de hecho, alimentos como el pan, el arroz o la leche ya contienen de forma natural una mezcla de ambos. Si estas dietas funcionan, es porque de forma indirecta acaban siendo hipocalóricas, no por la combinación de alimentos.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"Las dietas detox o depurativas eliminan toxinas del cuerpo"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> el hígado y los riñones ya se encargan de esa función todos los días, sin necesidad de zumos, sopas milagro o monodietas. Lo que suele perderse con estas pautas tan restrictivas es agua y masa muscular, no "toxinas". Prolongarlas más de dos o tres días puede ser contraproducente, sobre todo si apenas aportan proteína.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"El pan y la patata engordan, hay que eliminarlos"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> ambos son alimentos moderados en calorías por sí mismos —la patata cocida aporta menos energía que un filete o un yogur entero—. El problema suele estar en lo que los acompaña: mantequilla, salsas, frituras o el tamaño de la ración. Sustituir el pan blanco por integral, eso sí, añade fibra y micronutrientes extra.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"Si un producto es 'light' o 'sin azúcar', puedo comerlo sin límite"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> "light" solo indica que ese producto tiene menos calorías, grasa o azúcar que su versión original, no que sea bajo en calorías en términos absolutos. Una galleta "light" puede seguir aportando bastante energía. Merece la pena mirar la etiqueta nutricional en vez de fiarse solo de la palabra del envase.</p>
+        </details>
+
+        <details class="tip-card reveal" data-category="mitos">
+          <summary>
+            <span class="tip-card-icon">{icon('question')}</span>
+            <span class="tip-card-head">
+              <span class="tip-category">Mitos y realidades</span>
+              <strong>"Una dieta vegetariana o vegana siempre es más sana para perder peso"</strong>
+            </span>
+            <span class="tip-toggle">+</span>
+          </summary>
+          <p class="tip-card-body"><strong>Realidad:</strong> bien planificada, una alimentación vegetariana o vegana puede ser perfectamente saludable y compatible con perder peso. El matiz importante es "bien planificada": sin cuidarla, es fácil quedarse corto en vitamina B12, hierro, calcio o vitamina D, nutrientes que en la dieta omnívora provienen sobre todo de carne, pescado y lácteos. No es un mito que sea sana, sino que lo sea "siempre" y sin planificación.</p>
+        </details>
+      </div>
+
+      <p style="text-align:center;color:var(--color-text-muted);font-size:var(--text-sm);margin-top:var(--space-6);">¿Quieres saber cuántas calorías necesitas aproximadamente cada día, más allá de los mitos? Pruébalo con nuestra <a href="calculadora.html">calculadora nutricional</a>.</p>
     </div>
   </section>
 
@@ -622,6 +725,142 @@ build(
 )
 print("consejos built")
 
+
+# ============================================================
+# CALCULADORA
+# ============================================================
+calculadora_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Calculadora nutricional</span>
+      <h1>Tu punto de partida: IMC y necesidad calórica estimada</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">Una herramienta orientativa para hacerte una idea general antes de tu consulta. No sustituye una valoración individualizada con nuestro equipo médico y nutricionista.</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="demo-banner">
+        {icon('shield')}
+        <span>Estos resultados son estimaciones basadas en fórmulas y consensos clínicos ampliamente utilizados en nutrición. Cada persona tiene particularidades —composición corporal, patologías, medicación— que solo una valoración profesional puede tener en cuenta.</span>
+      </div>
+
+      <div class="checkout-grid calc-grid">
+        <div class="reveal">
+          <form id="calc-form" class="form calc-form">
+            <h3 style="margin-bottom:var(--space-5);">Tus datos</h3>
+
+            <div class="calc-toggle-group" role="radiogroup" aria-label="Sexo">
+              <label class="calc-toggle">
+                <input type="radio" name="calc-sex" value="mujer" checked>
+                <span>Mujer</span>
+              </label>
+              <label class="calc-toggle">
+                <input type="radio" name="calc-sex" value="hombre">
+                <span>Hombre</span>
+              </label>
+            </div>
+
+            <div class="form-grid" style="margin-top:var(--space-5);">
+              <div class="form-field">
+                <label for="calc-weight">Peso (kg)</label>
+                <input type="number" id="calc-weight" min="30" max="300" step="0.1" required placeholder="Ej. 70">
+              </div>
+              <div class="form-field">
+                <label for="calc-height">Altura (cm)</label>
+                <input type="number" id="calc-height" min="100" max="230" step="0.1" required placeholder="Ej. 170">
+              </div>
+              <div class="form-field">
+                <label for="calc-age">Edad (años)</label>
+                <input type="number" id="calc-age" min="14" max="100" step="1" required placeholder="Ej. 35">
+              </div>
+              <div class="form-field">
+                <label for="calc-activity">Nivel de actividad</label>
+                <select id="calc-activity">
+                  <option value="1.2">Sedentario (poco o ningún ejercicio)</option>
+                  <option value="1.375">Ligero (ejercicio suave 1-3 días/semana)</option>
+                  <option value="1.55" selected>Moderado (ejercicio 3-5 días/semana)</option>
+                  <option value="1.725">Activo (ejercicio intenso 6-7 días/semana)</option>
+                  <option value="1.9">Muy activo (trabajo físico + entreno diario)</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="calc-goal">Objetivo</label>
+                <select id="calc-goal">
+                  <option value="mantener">Mantener mi peso actual</option>
+                  <option value="perder" selected>Reducir peso de forma gradual</option>
+                  <option value="ganar">Ganar peso o masa muscular</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-4);">Calcular mis resultados</button>
+            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Tus datos se calculan en tu propio navegador: no se guardan ni se envían a ningún servidor.</p>
+          </form>
+        </div>
+
+        <aside class="reveal">
+          <div id="calc-results" class="calc-results">
+            <div class="calc-results-empty">
+              {icon('calculator')}
+              <p>Completa el formulario y pulsa «Calcular» para ver tu IMC y tu estimación de necesidad calórica diaria.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--offset">
+    <div class="wrap">
+      <div class="header-block center">
+        <span class="eyebrow" style="justify-content:center;">Cómo lo calculamos</span>
+        <h2>Detrás de la calculadora</h2>
+        <p>Nada de fórmulas secretas: estas son las referencias clínicas en las que se apoya cada resultado.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card-icon">{icon('scale')}</div>
+          <h3>Índice de masa corporal</h3>
+          <p>Se calcula dividiendo el peso en kilogramos entre la altura en metros al cuadrado, y se clasifica según los puntos de corte del <a href="https://www.seedo.es/images/2020_Consenso_SEEDO-SEMERGEN.pdf" target="_blank" rel="noopener noreferrer">consenso de la Sociedad Española para el Estudio de la Obesidad (SEEDO)</a>, referencia habitual en la práctica clínica española.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('flame')}</div>
+          <h3>Metabolismo basal</h3>
+          <p>Estimamos la energía que tu cuerpo consume en reposo con la <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9967803/" target="_blank" rel="noopener noreferrer">ecuación de Mifflin-St Jeor (1990)</a>, señalada en estudios de validación como una de las más precisas para la población adulta general.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('dumbbell')}</div>
+          <h3>Nivel de actividad</h3>
+          <p>Multiplicamos el metabolismo basal por un factor de actividad física, siguiendo la lógica de los niveles de actividad (PAL) descritos en el informe de la <a href="https://openknowledge.fao.org/server/api/core/bitstreams/65875dc7-f8c5-4a70-b0e1-f429793860ae/content" target="_blank" rel="noopener noreferrer">consulta de expertos FAO/OMS/UNU sobre requerimientos energéticos</a>, para estimar tu gasto calórico total.</p>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--color-text-muted);font-size:var(--text-sm);margin-top:var(--space-8);max-width:640px;margin-inline:auto;">Esta calculadora es una reinterpretación propia y actualizada, con fórmulas médicas vigentes, del espíritu de las clásicas tablas de autoevaluación que durante años acompañaron a los programas de educación nutricional en consulta.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <h2>¿Quieres un plan hecho a tu medida?</h2>
+        <p style="max-width:520px;margin-inline:auto;margin-bottom:var(--space-6);">Estas cifras son un punto de partida. En consulta afinamos tu objetivo con una valoración completa y un seguimiento cercano.</p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="contacto.html" class="btn" style="background:var(--color-bg);color:var(--color-primary);">Reservar consulta online</a>
+          <a href="precios.html" class="btn btn--ghost">Ver planes y precios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+'''
+
+build(
+    "/home/user/workspace/minutrisalud/calculadora.html",
+    "Calculadora nutricional — IMC y necesidad calórica | Minutrisalud",
+    "Calcula tu IMC y una estimación de tu necesidad calórica diaria con fórmulas clínicas actuales (SEEDO, Mifflin-St Jeor). Herramienta orientativa de Minutrisalud.",
+    "Calculadora",
+    calculadora_body,
+)
+print("calculadora built")
 
 
 # ============================================================
