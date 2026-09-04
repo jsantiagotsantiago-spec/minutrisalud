@@ -54,7 +54,7 @@ index_body = f'''
         </div>
       </div>
       <div class="hero-media reveal">
-        <img src="./assets/hero.png" alt="Mesa con alimentos frescos y saludables: verduras de hoja verde, nueces, cítricos y pan integral" loading="eager">
+        <img src="./assets/hero.webp" alt="Mesa con alimentos frescos y saludables: verduras de hoja verde, nueces, cítricos y pan integral" loading="eager">
       </div>
     </div>
   </section>
@@ -100,7 +100,7 @@ index_body = f'''
         </ul>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/consulta.png" alt="Escritorio de consulta con cuaderno de notas, cinta métrica y un vaso de agua con limón" loading="lazy">
+        <img src="./assets/consulta.webp" alt="Escritorio de consulta con cuaderno de notas, cinta métrica y un vaso de agua con limón" loading="lazy">
       </div>
     </div>
   </section>
@@ -220,7 +220,7 @@ index_body = f'''
           <a href="app.html" class="btn btn--warm" style="margin-top:var(--space-4);width:fit-content;">Ver adelanto de la app</a>
         </div>
         <div class="app-teaser-media">
-          <img src="./assets/app-preview.png" alt="Vista previa conceptual de la futura app Minutrisalud en un teléfono móvil" loading="lazy">
+          <img src="./assets/app-preview.webp" alt="Vista previa conceptual de la futura app Minutrisalud en un teléfono móvil" loading="lazy">
         </div>
       </div>
     </div>
@@ -276,7 +276,7 @@ servicios_body = f'''
         <a href="contacto.html" class="btn btn--primary" style="margin-top:var(--space-6);">Reservar teleconsulta</a>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/teleconsulta.png" alt="Tableta con videollamada de teleconsulta sobre una mesa de madera" loading="lazy">
+        <img src="./assets/teleconsulta.webp" alt="Tableta con videollamada de teleconsulta sobre una mesa de madera" loading="lazy">
       </div>
     </div>
   </section>
@@ -295,7 +295,7 @@ servicios_body = f'''
         </ul>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/valoracion.png" alt="Mesa de valoración con cinta métrica, báscula y formulario clínico" loading="lazy">
+        <img src="./assets/valoracion.webp" alt="Mesa de valoración con cinta métrica, báscula y formulario clínico" loading="lazy">
       </div>
     </div>
   </section>
@@ -303,7 +303,7 @@ servicios_body = f'''
   <section class="section" id="planes">
     <div class="wrap split reverse">
       <div class="split-media reveal">
-        <img src="./assets/plan.png" alt="Planificación semanal de comidas con ingredientes naturales sobre una mesa de madera" loading="lazy">
+        <img src="./assets/plan.webp" alt="Planificación semanal de comidas con ingredientes naturales sobre una mesa de madera" loading="lazy">
       </div>
       <div class="reveal">
         <span class="eyebrow">03 — Plan de alimentación</span>
@@ -392,7 +392,7 @@ consejos_body = f'''
         </ul>
       </div>
       <div class="split-media reveal">
-        <img src="./assets/consejos.png" alt="Bowl de ensalada fresca junto a una botella de agua, una libreta y zapatillas de deporte sobre una mesa de madera" loading="lazy">
+        <img src="./assets/consejos.webp" alt="Bowl de ensalada fresca junto a una botella de agua, una libreta y zapatillas de deporte sobre una mesa de madera" loading="lazy">
       </div>
     </div>
   </section>
@@ -901,7 +901,7 @@ sobre_body = f'''
   <section class="section section--offset">
     <div class="wrap split">
       <div class="split-media reveal">
-        <img src="./assets/equipo-espacio.png" alt="Espacio de trabajo cálido con ordenador en videollamada y cuaderno de notas" loading="lazy">
+        <img src="./assets/equipo-espacio.webp" alt="Espacio de trabajo cálido con ordenador en videollamada y cuaderno de notas" loading="lazy">
       </div>
       <div class="reveal">
         <span class="eyebrow">Cómo trabajamos</span>

@@ -120,7 +120,11 @@ HEAD_TEMPLATE = '''<!doctype html>
   <meta name="description" content="{description}" />
   <meta property="og:title" content="{title}" />
   <meta property="og:description" content="{description}" />
-  <meta property="og:image" content="./assets/hero.png" />
+  <meta property="og:image" content="./assets/hero-og.jpg" />
+  <link rel="icon" href="./assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=erode@400,500,600&display=swap" rel="stylesheet" />
