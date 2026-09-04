@@ -153,7 +153,7 @@ index_body = f'''
           <p class="pricing-tagline">Autogestionado, sin intervención profesional salvo que lo solicites</p>
           <div class="pricing-amount"><strong>9,90 €</strong><span>/ mes, sin permanencia</span></div>
           <p class="pricing-secondary">Introduces tus datos y la web genera tu plan al instante</p>
-          <a href="precios.html#planes" class="btn btn--ghost pricing-cta">Ver detalles</a>
+          <a href="precios.html#planes-precios" class="btn btn--ghost pricing-cta">Ver detalles</a>
         </div>
         <div class="card pricing-card pricing-card--featured reveal">
           <span class="badge pricing-badge">Más solicitado</span>
@@ -161,14 +161,14 @@ index_body = f'''
           <p class="pricing-tagline">Teleconsulta con nutricionista, incluye dietas especiales</p>
           <div class="pricing-amount"><strong>45 €</strong><span>primera consulta</span></div>
           <p class="pricing-secondary">Seguimientos desde 30 € · celiaquía, alergias e intolerancias sin coste adicional</p>
-          <a href="precios.html#planes" class="btn btn--primary pricing-cta">Ver detalles</a>
+          <a href="precios.html#planes-precios" class="btn btn--primary pricing-cta">Ver detalles</a>
         </div>
         <div class="card pricing-card reveal">
           <span class="pricing-name">Plan Médico + Nutrición</span>
           <p class="pricing-tagline">Valoración conjunta cuando el caso necesita más precisión</p>
           <div class="pricing-amount"><strong>89 €</strong><span>valoración inicial</span></div>
           <p class="pricing-secondary">Seguimientos desde 49 € · nutricionista y médico internista coordinados</p>
-          <a href="precios.html#planes" class="btn btn--ghost pricing-cta">Ver detalles</a>
+          <a href="precios.html#planes-precios" class="btn btn--ghost pricing-cta">Ver detalles</a>
         </div>
       </div>
       <p class="pricing-note">Precios orientativos 2026, a confirmar por el equipo antes de publicarse de forma definitiva. <a href="precios.html">Ver todos los planes y qué incluye cada uno →</a></p>
@@ -304,7 +304,7 @@ servicios_body = f'''
     </div>
   </section>
 
-  <section class="section" id="planes">
+  <section class="section" id="planes-servicios">
     <div class="wrap split reverse">
       <div class="split-media reveal">
         <img src="./assets/plan.webp" alt="Planificación semanal de comidas con ingredientes naturales sobre una mesa de madera" loading="lazy">
@@ -875,7 +875,7 @@ precios_body = f'''
     </div>
   </section>
 
-  <section class="section" id="planes">
+  <section class="section" id="planes-precios">
     <div class="wrap">
       <div class="grid grid--3">
         <div class="card pricing-card reveal">

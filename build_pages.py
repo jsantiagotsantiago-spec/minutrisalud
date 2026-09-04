@@ -92,7 +92,7 @@ FOOTER = f'''  <footer class="footer">
           <ul>
             <li><a href="servicios.html#teleconsulta">Teleconsulta</a></li>
             <li><a href="servicios.html#valoracion">Valoración nutricional</a></li>
-            <li><a href="servicios.html#planes">Planes personalizados</a></li>
+            <li><a href="servicios.html#planes-servicios">Planes personalizados</a></li>
             <li><a href="servicios.html#seguimiento">Seguimiento y control</a></li>
             <li><a href="precios.html">Ver precios</a></li>
             <li><a href="pago.html">Contratar y pagar</a></li>
