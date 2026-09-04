@@ -1296,6 +1296,85 @@ print("app built")
 
 
 # ============================================================
+# NUTRIGEST (herramienta interna del equipo — agenda y pacientes)
+# ============================================================
+#
+# ¿QUÉ ES ESTA PÁGINA?
+# Es una página informativa sobre NutriGest, la aplicación que gestiona
+# la agenda y las fichas de los pacientes de la consulta. Está pensada
+# SOLO para el equipo (no para pacientes) y por eso NO muestra datos
+# reales ni incrusta la aplicación dentro de esta web pública: solo
+# explica qué hace y ofrece un botón de acceso.
+#
+# CÓMO ACTUALIZAR ESTA PÁGINA EN EL FUTURO (léelo antes de tocar nada):
+# 1. Busca más abajo la línea que empieza por: const NUTRIGEST_URL =
+# 2. Cambia solo el texto entre comillas por la nueva dirección:
+#      - Si NutriGest funciona en el ordenador de la consulta: usa
+#        "http://127.0.0.1:3200/" (el botón solo funcionará abierto
+#        desde ese mismo ordenador).
+#      - Si NutriGest ya está publicada en internet: usa su dirección
+#        web definitiva, por ejemplo "https://nutrigest.minutrisalud.com/".
+# 3. Guarda, y vuelve a generar el sitio (el mismo proceso de siempre).
+# No hace falta cambiar nada más: el botón "Abrir NutriGest" se
+# actualiza solo con ese único dato, tanto si es una nueva versión
+# como si cambia de local a la nube.
+nutrigest_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="badge" style="margin-inline:auto;">En desarrollo · Solo para el equipo</span>
+      <h1>NutriGest</h1>
+      <p class="lede" style="margin-inline:auto;text-align:center;">La herramienta interna para organizar la agenda de citas y las fichas de los pacientes de la consulta. Se está terminando de configurar; esta página se actualizará sola cuando esté lista.</p>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <div class="card-icon">{icon('calendar')}</div>
+          <h3>Agenda de citas</h3>
+          <p>Organiza y consulta las citas del día, la semana y el mes desde un único calendario.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('notebook')}</div>
+          <h3>Fichas de pacientes</h3>
+          <p>Cada paciente con sus datos, notas de consulta y seguimiento en un mismo lugar.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">{icon('shield')}</div>
+          <h3>Acceso solo para el equipo</h3>
+          <p>Requiere usuario y contraseña propios de NutriGest. Ningún dato de pacientes se muestra en esta página pública.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap wrap--narrow" style="text-align:center;">
+      <h2>Acceso para el equipo</h2>
+      <p class="lede" style="margin-inline:auto;margin-bottom:var(--space-6);">Este botón abre NutriGest en una pestaña nueva. Ahora mismo enlaza a la versión de prueba del ordenador de la consulta, así que solo funcionará abierto desde ese mismo ordenador. Cuando NutriGest esté publicada en internet, el botón se actualizará para funcionar desde cualquier lugar.</p>
+      <a id="nutrigest-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Abrir NutriGest ↗</a>
+      <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);max-width:52ch;margin-inline:auto;">Próximamente, NutriGest también se conectará con la aplicación de Historia Clínica con IA (en desarrollo) para compartir la información del paciente entre ambas herramientas.</p>
+      <script>
+        // Ver instrucciones de actualización arriba, en make_site.py.
+        const NUTRIGEST_URL = "http://127.0.0.1:3200/";
+        document.getElementById('nutrigest-link').href = NUTRIGEST_URL;
+      </script>
+    </div>
+  </section>
+'''
+
+build(
+    "/home/user/workspace/minutrisalud/nutrigest.html",
+    "NutriGest — gestión de la consulta (equipo)",
+    "NutriGest organiza la agenda de citas y las fichas de los pacientes de la consulta. Herramienta interna, solo para el equipo.",
+    "NutriGest",
+    nutrigest_body,
+)
+print("nutrigest built")
+
+
+# ============================================================
 # CONTACTO
 # ============================================================
 contacto_body = f'''

@@ -84,6 +84,7 @@ FOOTER = f'''  <footer class="footer">
             <li><a href="precios.html">Planes y precios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
             <li><a href="app.html">App Minutrisalud</a></li>
+            <li><a href="nutrigest.html">NutriGest (equipo)</a></li>
           </ul>
         </div>
         <div>

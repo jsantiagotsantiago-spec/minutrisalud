@@ -1,0 +1,5 @@
+.git
+__pycache__
+*.pyc
+make_site.py
+build_pages.py
