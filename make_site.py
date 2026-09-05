@@ -1498,7 +1498,7 @@ legal_body = f'''
   <section class="section--tight">
     <div class="wrap wrap--narrow legal-page">
       <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
-      <div class="legal-pending">Este aviso legal contiene datos marcados entre corchetes ([ ]) que aún deben completarse (dirección postal y números de colegiado) antes de la puesta en marcha definitiva del servicio.</div>
+      <div class="legal-pending">Falta por completar el número de colegiado de las nutricionistas del equipo antes de la puesta en marcha definitiva del servicio.</div>
 
       <h2>1. Datos identificativos del titular</h2>
       <p>En cumplimiento del deber de información del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos:</p>
@@ -1506,11 +1506,11 @@ legal_body = f'''
         <li><strong>Titular:</strong> Jesús María Santiago Toscano</li>
         <li><strong>Nombre comercial:</strong> Consulta Dr. Santiago — Minutrisalud (servicio de teleconsulta)</li>
         <li><strong>NIF:</strong> 80126299A</li>
-        <li><strong>Domicilio:</strong> [Dirección postal pendiente de completar]</li>
+        <li><strong>Domicilio:</strong> C/ Real, 13, 1.º B, 51001 Ceuta</li>
         <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
         <li><strong>Teléfono de contacto:</strong> <a href="tel:+34699443059">+34 699 44 30 59</a></li>
         <li><strong>Actividad:</strong> Consulta de Medicina Interna y teleconsulta de nutrición, prestada por videollamada</li>
-        <li><strong>Colegiación profesional:</strong> Médico colegiado n.º [pendiente de completar] del Colegio Oficial de Médicos de [pendiente de completar]. Equipo de nutrición: Raquel Santiago Carrasco y Saida Mohamed Mohamed, colegiadas como dietistas-nutricionistas con n.º [pendiente de completar]</li>
+        <li><strong>Colegiación profesional:</strong> Médico colegiado n.º 515100930 del Colegio Oficial de Médicos de Ceuta. Equipo de nutrición: Raquel Santiago Carrasco y Saida Mohamed Mohamed, colegiadas como dietistas-nutricionistas — n.º de colegiado pendiente de completar</li>
       </ul>
 
       <h2>2. Objeto</h2>
@@ -1532,7 +1532,7 @@ legal_body = f'''
       <p>El tratamiento de los datos personales facilitados a través de este sitio se rige por la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>.</p>
 
       <h2>8. Legislación aplicable y fuero</h2>
-      <p>Este aviso legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los Juzgados y Tribunales que correspondan según la normativa de protección de personas consumidoras y usuarias, sin perjuicio del domicilio pendiente de completar del titular.</p>
+      <p>Este aviso legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los Juzgados y Tribunales que correspondan según la normativa de protección de personas consumidoras y usuarias, con domicilio en Ceuta, salvo que la normativa de consumo atribuya el fuero al domicilio del usuario.</p>
 
       <h2>9. Modificaciones</h2>
       <p>El titular se reserva el derecho a modificar este aviso legal para adaptarlo a novedades legislativas o cambios en el servicio. Se recomienda revisar este documento periódicamente.</p>
@@ -1551,13 +1551,13 @@ privacidad_body = f'''
   <section class="section--tight">
     <div class="wrap wrap--narrow legal-page">
       <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
-      <div class="legal-pending">Documento pendiente de completar con la dirección postal y los números de colegiado profesional antes de la puesta en marcha definitiva del servicio.</div>
+      <div class="legal-pending">Falta por completar el número de colegiado de las nutricionistas del equipo antes de la puesta en marcha definitiva del servicio.</div>
 
       <h2>1. Responsable del tratamiento</h2>
       <ul>
         <li><strong>Responsable:</strong> Jesús María Santiago Toscano (Consulta Dr. Santiago — Minutrisalud)</li>
         <li><strong>NIF:</strong> 80126299A</li>
-        <li><strong>Domicilio:</strong> [Dirección postal pendiente de completar]</li>
+        <li><strong>Domicilio:</strong> C/ Real, 13, 1.º B, 51001 Ceuta</li>
         <li><strong>Correo electrónico:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
         <li><strong>Teléfono:</strong> <a href="tel:+34699443059">+34 699 44 30 59</a></li>
       </ul>
