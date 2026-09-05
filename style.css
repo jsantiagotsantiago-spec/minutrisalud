@@ -1641,3 +1641,49 @@ p {
     padding-left: 0;
   }
 }
+
+/* Aviso de sitio en construcción */
+.construction-banner {
+  background: var(--color-accent-soft, #fdecd8);
+  border-bottom: 1px solid var(--color-border, #e7e0d4);
+}
+
+.construction-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 12px);
+  padding-top: var(--space-2, 8px);
+  padding-bottom: var(--space-2, 8px);
+}
+
+.construction-banner-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  color: #b5651d;
+}
+
+.construction-banner p {
+  margin: 0;
+  font-size: var(--text-sm, 0.875rem);
+  color: #7a4a15;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .construction-banner {
+  background: #3a2a12;
+  border-bottom-color: #4a3a1f;
+}
+
+[data-theme="dark"] .construction-banner-icon {
+  color: #e8b26a;
+}
+
+[data-theme="dark"] .construction-banner p {
+  color: #e8c99a;
+}
+
+@media (max-width: 560px) {
+  .construction-banner p {
+    font-size: 0.8125rem;
+  }
+}

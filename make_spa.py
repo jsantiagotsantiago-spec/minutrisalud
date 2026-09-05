@@ -271,11 +271,23 @@ TAIL_TEMPLATE = '''
 '''
 
 
+CONSTRUCTION_BANNER = '''  <div class="construction-banner">
+    <div class="wrap construction-banner-inner">
+      <span class="construction-banner-icon" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+      </span>
+      <p>Este sitio está en construcción: algunos contenidos y funciones (como el pago online y NutriGest) todavía se están terminando de preparar.</p>
+    </div>
+  </div>
+'''
+
+
 def build_spa(filename):
     html = HEAD_TEMPLATE.format(
         title="Minutrisalud — Consulta de nutrición online con criterio médico",
         description="Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
     )
+    html += CONSTRUCTION_BANNER
     html += spa_header("index")
     html += '  <main id="spa-root">\n'
     for slug, title, body, nav_label in PAGES:
