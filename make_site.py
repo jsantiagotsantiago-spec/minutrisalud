@@ -1051,6 +1051,13 @@ pago_body = f'''
               </div>
             </div>
 
+            <div class="form-field full consent-field">
+              <label class="consent-check">
+                <input type="checkbox" id="pago-consent" name="consent" required>
+                <span>He leído y acepto los <a href="#/terminos" data-nav-link="terminos">términos y condiciones</a> y la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>, y presto mi consentimiento expreso para el tratamiento de mis datos de salud necesarios para prestar el servicio contratado.</span>
+              </label>
+            </div>
+
             <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-6);">Continuar al pago seguro</button>
             <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al pulsar, irás a la pasarela de pago de Stripe (entorno de pruebas) para introducir tus datos de tarjeta de forma segura. Minutrisalud nunca almacena los datos de tu tarjeta.</p>
           </form>
@@ -1122,13 +1129,13 @@ sobre_body = f'''
         </div>
         <div class="card team-card reveal">
           <div class="team-avatar">RS</div>
-          <span class="team-role">Nutricionista</span>
+          <span class="team-role">Equipo de nutrición</span>
           <h3>Raquel Santiago Carrasco</h3>
           <p>Diseño de planes de alimentación personalizados y acompañamiento en el seguimiento nutricional, adaptados a la situación clínica y la rutina de cada paciente.</p>
         </div>
         <div class="card team-card reveal">
           <div class="team-avatar">SM</div>
-          <span class="team-role">Nutricionista</span>
+          <span class="team-role">Equipo de nutrición</span>
           <h3>Saida Mohamed Mohamed</h3>
           <p>Valoración nutricional y consulta de seguimiento, con atención cercana a las revisiones periódicas y al ajuste continuado de los planes.</p>
         </div>
@@ -1418,6 +1425,12 @@ contacto_body = f'''
               <textarea id="message" name="message" rows="5" placeholder="Cuéntanos brevemente tu situación y disponibilidad"></textarea>
             </div>
           </div>
+          <div class="form-field full consent-field">
+            <label class="consent-check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <span>He leído y acepto la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>, y presto mi consentimiento expreso para el tratamiento de mis datos de salud con el fin de gestionar esta solicitud.</span>
+            </label>
+          </div>
           <button type="submit" class="btn btn--primary" style="width:100%;">Enviar solicitud</button>
           <p id="form-note" hidden style="margin-top:var(--space-3);font-size:var(--text-sm);color:var(--color-primary);">Gracias — se abrirá tu cliente de correo para enviar la solicitud.</p>
         </form>
@@ -1444,7 +1457,7 @@ contacto_body = f'''
             <span class="contact-info-icon">{icon('phone')}</span>
             <div>
               <strong>Teléfono</strong>
-              <p><a href="tel:+34616412138">+34 616 41 21 38</a></p>
+              <p><a href="tel:+34699443059">+34 699 44 30 59</a></p>
             </div>
           </div>
           <div class="contact-info-item">
@@ -1468,3 +1481,217 @@ build(
     contacto_body,
 )
 print("contacto built")
+
+
+# =====================================================================
+# Páginas legales (Aviso legal, Privacidad, Cookies, Términos)
+# =====================================================================
+
+legal_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Información legal</span>
+      <h1>Aviso legal</h1>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap wrap--narrow legal-page">
+      <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
+      <div class="legal-pending">Este aviso legal contiene datos marcados entre corchetes ([ ]) que aún deben completarse (dirección postal y números de colegiado) antes de la puesta en marcha definitiva del servicio.</div>
+
+      <h2>1. Datos identificativos del titular</h2>
+      <p>En cumplimiento del deber de información del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos:</p>
+      <ul>
+        <li><strong>Titular:</strong> Jesús María Santiago Toscano</li>
+        <li><strong>Nombre comercial:</strong> Consulta Dr. Santiago — Minutrisalud (servicio de teleconsulta)</li>
+        <li><strong>NIF:</strong> 80126299A</li>
+        <li><strong>Domicilio:</strong> [Dirección postal pendiente de completar]</li>
+        <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
+        <li><strong>Teléfono de contacto:</strong> <a href="tel:+34699443059">+34 699 44 30 59</a></li>
+        <li><strong>Actividad:</strong> Consulta de Medicina Interna y teleconsulta de nutrición, prestada por videollamada</li>
+        <li><strong>Colegiación profesional:</strong> Médico colegiado n.º [pendiente de completar] del Colegio Oficial de Médicos de [pendiente de completar]. Equipo de nutrición: Raquel Santiago Carrasco y Saida Mohamed Mohamed, colegiadas como dietistas-nutricionistas con n.º [pendiente de completar]</li>
+      </ul>
+
+      <h2>2. Objeto</h2>
+      <p>Este sitio web (en adelante, "Minutrisalud") tiene por objeto informar sobre los servicios de teleconsulta médica y nutricional ofrecidos por el titular, así como permitir la solicitud de citas y, en su caso, la contratación y el pago de dichos servicios.</p>
+
+      <h2>3. Condiciones de acceso y uso</h2>
+      <p>El acceso a Minutrisalud es gratuito, salvo en lo relativo al coste de la conexión a internet del usuario. El uso del sitio atribuye la condición de usuario y supone la aceptación plena de este aviso legal, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>, de la <a href="#/cookies" data-nav-link="cookies">política de cookies</a> y, cuando proceda, de los <a href="#/terminos" data-nav-link="terminos">términos y condiciones de contratación</a>.</p>
+
+      <h2>4. Naturaleza informativa de los contenidos</h2>
+      <p>Los contenidos generales del sitio (artículos, consejos, calculadora nutricional, etc.) tienen finalidad divulgativa y orientativa. No constituyen diagnóstico ni sustituyen una valoración médica o nutricional individualizada, que solo se ofrece mediante teleconsulta contratada con el equipo profesional. Minutrisalud no es un servicio de urgencias: ante cualquier emergencia médica, contacte con el 112 o acuda al centro sanitario más cercano.</p>
+
+      <h2>5. Propiedad intelectual e industrial</h2>
+      <p>Los textos, imágenes, logotipos, código fuente y demás contenidos de este sitio son propiedad del titular o se utilizan con la debida autorización, y están protegidos por la normativa de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución o transformación sin autorización expresa, salvo para uso personal y privado.</p>
+
+      <h2>6. Enlaces y servicios de terceros</h2>
+      <p>Minutrisalud utiliza la pasarela de pago de Stripe para la gestión de cobros. El titular no se hace responsable del contenido de sitios web de terceros a los que se pueda acceder mediante enlaces desde este sitio.</p>
+
+      <h2>7. Protección de datos</h2>
+      <p>El tratamiento de los datos personales facilitados a través de este sitio se rige por la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>.</p>
+
+      <h2>8. Legislación aplicable y fuero</h2>
+      <p>Este aviso legal se rige por la legislación española. Para la resolución de cualquier controversia, las partes se someten a los Juzgados y Tribunales que correspondan según la normativa de protección de personas consumidoras y usuarias, sin perjuicio del domicilio pendiente de completar del titular.</p>
+
+      <h2>9. Modificaciones</h2>
+      <p>El titular se reserva el derecho a modificar este aviso legal para adaptarlo a novedades legislativas o cambios en el servicio. Se recomienda revisar este documento periódicamente.</p>
+    </div>
+  </section>
+'''
+
+privacidad_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Información legal</span>
+      <h1>Política de privacidad</h1>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap wrap--narrow legal-page">
+      <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
+      <div class="legal-pending">Documento pendiente de completar con la dirección postal y los números de colegiado profesional antes de la puesta en marcha definitiva del servicio.</div>
+
+      <h2>1. Responsable del tratamiento</h2>
+      <ul>
+        <li><strong>Responsable:</strong> Jesús María Santiago Toscano (Consulta Dr. Santiago — Minutrisalud)</li>
+        <li><strong>NIF:</strong> 80126299A</li>
+        <li><strong>Domicilio:</strong> [Dirección postal pendiente de completar]</li>
+        <li><strong>Correo electrónico:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+34699443059">+34 699 44 30 59</a></li>
+      </ul>
+
+      <h2>2. Finalidades del tratamiento</h2>
+      <p>Tratamos tus datos personales para:</p>
+      <ul>
+        <li>Gestionar solicitudes de contacto, citas y teleconsultas.</li>
+        <li>Elaborar valoraciones médicas y nutricionales, planes de alimentación y seguimiento clínico.</li>
+        <li>Tramitar la contratación y el cobro de los planes y servicios a través de la pasarela de pago.</li>
+        <li>Responder a consultas y comunicarnos contigo sobre el servicio solicitado.</li>
+        <li>Cumplir con las obligaciones legales, fiscales y de documentación clínica que correspondan a la actividad sanitaria.</li>
+      </ul>
+
+      <h2>3. Base legal del tratamiento</h2>
+      <p>La base legal para el tratamiento de tus datos es:</p>
+      <ul>
+        <li><strong>Consentimiento explícito</strong> (art. 9.2.a del Reglamento General de Protección de Datos, RGPD) para el tratamiento de datos de salud, prestado mediante la casilla de aceptación en los formularios del sitio.</li>
+        <li><strong>Ejecución de una relación precontractual o contractual</strong> (art. 6.1.b RGPD) para gestionar citas, valoraciones y la prestación del servicio contratado.</li>
+        <li><strong>Cumplimiento de obligaciones legales</strong> (art. 6.1.c RGPD) aplicables a la actividad sanitaria y a la facturación.</li>
+      </ul>
+
+      <h2>4. Datos que tratamos</h2>
+      <p>Según el formulario que utilices, podemos tratar:</p>
+      <ul>
+        <li><strong>Datos identificativos y de contacto:</strong> nombre, correo electrónico, teléfono.</li>
+        <li><strong>Datos de salud (categoría especial de datos):</strong> peso, altura, antecedentes, patologías previas, tratamiento farmacológico y demás información clínica que nos facilites para la valoración y el seguimiento nutricional o médico.</li>
+        <li><strong>Datos de pago:</strong> gestionados directamente por Stripe; Minutrisalud no almacena los datos de tu tarjeta.</li>
+      </ul>
+
+      <h2>5. Formulario de contacto</h2>
+      <p>Actualmente, el formulario de la sección "Contacto" abre tu propio gestor de correo electrónico para que envíes la solicitud directamente desde tu cuenta; los datos no quedan almacenados en un servidor de Minutrisalud, solo en el correo que tú envías y en el buzón que lo recibe.</p>
+
+      <h2>6. Plazo de conservación</h2>
+      <p>Conservaremos tus datos mientras exista una relación asistencial o contractual contigo y, posteriormente, durante los plazos legales de conservación de la documentación clínica y fiscal (con carácter general, la normativa sanitaria exige conservar la historia clínica un mínimo de 5 años desde el alta de cada proceso asistencial, sin perjuicio de plazos superiores que pueda fijar la normativa autonómica o estatal aplicable).</p>
+
+      <h2>7. Destinatarios y encargados del tratamiento</h2>
+      <p>Tus datos pueden ser comunicados a los siguientes encargados de tratamiento, con quienes existe el correspondiente contrato de encargo:</p>
+      <ul>
+        <li><strong>Stripe</strong>, como pasarela de pago (actualmente en modo de pruebas / Sandbox).</li>
+        <li><strong>GitHub Pages</strong> (GitHub, Inc., perteneciente a Microsoft Corporation), como proveedor de alojamiento de los archivos estáticos de este sitio web.</li>
+      </ul>
+      <p>No se cederán tus datos a terceros salvo obligación legal.</p>
+
+      <h2>8. Transferencias internacionales</h2>
+      <p>Algunos de los proveedores anteriores (Stripe, GitHub Pages) pueden tratar datos fuera del Espacio Económico Europeo, principalmente en Estados Unidos. En estos casos, el tratamiento se ampara en las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea u otras garantías adecuadas conforme al RGPD.</p>
+
+      <h2>9. Tus derechos</h2>
+      <p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, escribiendo a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a>, indicando el derecho que deseas ejercer y adjuntando copia de tu documento de identidad. También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>) si consideras que el tratamiento no se ajusta a la normativa vigente.</p>
+
+      <h2>10. Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos frente a accesos no autorizados, pérdida o alteración, en particular al tratarse de datos de salud.</p>
+
+      <h2>11. Menores de edad</h2>
+      <p>Los servicios de Minutrisalud están dirigidos a personas mayores de edad. Si un menor requiere atención, deberá facilitarse a través de su tutor legal, quien prestará el consentimiento correspondiente.</p>
+    </div>
+  </section>
+'''
+
+cookies_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Información legal</span>
+      <h1>Política de cookies</h1>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap wrap--narrow legal-page">
+      <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
+
+      <h2>1. ¿Qué son las cookies?</h2>
+      <p>Las cookies son pequeños archivos que los sitios web guardan en tu dispositivo para recordar información sobre tu visita, como tus preferencias de navegación.</p>
+
+      <h2>2. Cookies que utiliza este sitio actualmente</h2>
+      <p>Minutrisalud, en su versión actual, <strong>no utiliza cookies de análisis, publicidad ni seguimiento de terceros</strong>. Únicamente guarda en tu propio dispositivo, mediante la tecnología "localStorage" del navegador (que no es técnicamente una cookie ni se envía a ningún servidor), tu preferencia de modo claro u oscuro. Esta información no identifica a la persona usuaria ni se comparte con nadie.</p>
+
+      <h2>3. Cookies que podríamos incorporar en el futuro</h2>
+      <p>Si en el futuro incorporamos herramientas de analítica web (por ejemplo, para saber qué páginas se visitan más) o de mensajería, actualizaremos esta política y solicitaremos tu consentimiento mediante un aviso de cookies antes de instalar cualquier cookie no estrictamente necesaria.</p>
+
+      <h2>4. Cómo configurar o eliminar las cookies</h2>
+      <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de tu navegador:</p>
+      <ul>
+        <li>Google Chrome: Configuración → Privacidad y seguridad → Cookies</li>
+        <li>Mozilla Firefox: Opciones → Privacidad y seguridad</li>
+        <li>Safari: Preferencias → Privacidad</li>
+        <li>Microsoft Edge: Configuración → Cookies y permisos del sitio</li>
+      </ul>
+
+      <h2>5. Más información</h2>
+      <p>Si tienes cualquier duda sobre esta política de cookies, puedes escribirnos a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a>.</p>
+    </div>
+  </section>
+'''
+
+terminos_body = f'''
+  <section class="page-hero">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="justify-content:center;">Información legal</span>
+      <h1>Términos y condiciones</h1>
+    </div>
+  </section>
+
+  <section class="section--tight">
+    <div class="wrap wrap--narrow legal-page">
+      <p class="legal-updated">Última actualización: 5 de septiembre de 2026</p>
+      <div class="legal-pending">Estas condiciones son un borrador orientativo. Antes de activar el cobro real, recomendamos que un profesional del derecho especializado en sanidad y consumo las revise y las complete con los datos pendientes.</div>
+
+      <h2>1. Objeto y aceptación</h2>
+      <p>Estas condiciones regulan la contratación online de los servicios de teleconsulta médica y nutricional ofrecidos por Consulta Dr. Santiago — Minutrisalud (identificado en el <a href="#/legal" data-nav-link="legal">aviso legal</a>). La contratación de cualquier plan implica la aceptación íntegra de estas condiciones, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a> y de la información de precios vigente en cada momento.</p>
+
+      <h2>2. Descripción de los servicios</h2>
+      <p>Los planes disponibles (Digital, Nutrición, Médico-Nutricional, u otros que se publiquen) se describen con detalle en la sección <a href="#/precios" data-nav-link="precios">Planes y precios</a>. El titular puede actualizar el contenido, precio o disponibilidad de los planes, respetando siempre las condiciones ya contratadas por usuarios existentes.</p>
+
+      <h2>3. Proceso de contratación y pago</h2>
+      <p>La contratación se realiza a través del formulario de la sección "Pago", que redirige a la pasarela de pago de Stripe. <strong>El entorno de pago se encuentra actualmente en modo de pruebas (Stripe Sandbox): no se realizará ningún cargo real hasta que se active el modo de cobro definitivo</strong>, momento en el que se actualizará este aviso. Los precios se muestran en euros; se indicará si incluyen impuestos aplicables una vez determinado el régimen fiscal de la actividad.</p>
+
+      <h2>4. Derecho de desistimiento</h2>
+      <p>De acuerdo con el Texto Refundido de la Ley General para la Defensa de los Consumidores y Usuarios, el derecho de desistimiento de 14 días no resulta de aplicación a los servicios sanitarios prestados por profesionales sanitarios a pacientes, ni a servicios ya ejecutados en su totalidad con el consentimiento previo y expreso del usuario. En caso de duda sobre un servicio concreto, consulta con nosotros antes de contratarlo.</p>
+
+      <h2>5. Cancelación y modificación de citas</h2>
+      <p>Las citas de teleconsulta pueden reprogramarse o cancelarse escribiendo a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a> o al teléfono <a href="tel:+34699443059">+34 699 44 30 59</a>, con la antelación razonable que se indique en la confirmación de la cita.</p>
+
+      <h2>6. Naturaleza del servicio y responsabilidad profesional</h2>
+      <p>Los servicios se prestan por profesionales sanitarios colegiados, con arreglo a la lex artis y a la normativa que regula el ejercicio de sus respectivas profesiones. Minutrisalud no es un servicio de urgencias ni sustituye la atención presencial cuando esta sea necesaria; ante una urgencia médica, contacta con el 112.</p>
+
+      <h2>7. Reclamaciones</h2>
+      <p>Si no estás conforme con el servicio recibido, puedes presentar tu reclamación por correo electrónico a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a>. Como paciente, también tienes derecho a solicitar la hoja de reclamaciones correspondiente.</p>
+
+      <h2>8. Legislación aplicable</h2>
+      <p>Estas condiciones se rigen por la legislación española, en particular por la normativa de protección de personas consumidoras y usuarias y por la normativa sanitaria aplicable.</p>
+
+      <h2>9. Modificación de las condiciones</h2>
+      <p>El titular puede modificar estas condiciones para adaptarlas a cambios legislativos o del servicio; los cambios se publicarán en esta misma página con su fecha de actualización.</p>
+    </div>
+  </section>
+'''

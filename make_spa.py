@@ -43,6 +43,10 @@ PAGES = [
     ("app", "App Minutrisalud — Próximamente", make_site.app_body, "App Minutrisalud"),
     ("nutrigest", "NutriGest — gestión de la consulta (equipo)", make_site.nutrigest_body, "NutriGest"),
     ("contacto", "Contacto — Minutrisalud", make_site.contacto_body, "Contacto"),
+    ("legal", "Aviso legal — Minutrisalud", make_site.legal_body, "Aviso legal"),
+    ("privacidad", "Política de privacidad — Minutrisalud", make_site.privacidad_body, "Privacidad"),
+    ("cookies", "Política de cookies — Minutrisalud", make_site.cookies_body, "Cookies"),
+    ("terminos", "Términos y condiciones — Minutrisalud", make_site.terminos_body, "Términos y condiciones"),
 ]
 
 SLUGS = {slug for slug, *_ in PAGES}
@@ -150,6 +154,15 @@ SPA_FOOTER = f'''  <footer class="footer">
           <ul>
             <li><a href="mailto:hola@minutrisalud.com" target="_blank" rel="noopener noreferrer">hola@minutrisalud.com</a></li>
             <li><a href="#/contacto" data-nav-link="contacto">Solicitar cita</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#/legal" data-nav-link="legal">Aviso legal</a></li>
+            <li><a href="#/privacidad" data-nav-link="privacidad">Política de privacidad</a></li>
+            <li><a href="#/cookies" data-nav-link="cookies">Política de cookies</a></li>
+            <li><a href="#/terminos" data-nav-link="terminos">Términos y condiciones</a></li>
           </ul>
         </div>
       </div>
