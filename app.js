@@ -1,5 +1,5 @@
 // ============================================
-// MINUTRISALUD — shared behaviors
+// SALUD EN LA MESA — shared behaviors
 // ============================================
 
 // Theme toggle (system-preference aware, no localStorage — sandboxed iframes block it)
@@ -159,8 +159,8 @@
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = form.querySelector('input[type="email"]').value;
-    const body = encodeURIComponent(`Avísame cuando la app Minutrisalud esté disponible.\nEmail: ${email}`);
-    window.location.href = `mailto:hola@minutrisalud.com?subject=Aviso%20app%20Minutrisalud&body=${body}`;
+    const body = encodeURIComponent(`Avísame cuando la app Salud en la Mesa esté disponible.\nEmail: ${email}`);
+    window.location.href = `mailto:hola@minutrisalud.com?subject=Aviso%20app%20Salud en la Mesa&body=${body}`;
     const note = document.querySelector('#notify-note');
     if (note) note.hidden = false;
     form.reset();

@@ -37,7 +37,7 @@ index_body = f'''
       <div>
         <span class="eyebrow">Consulta de nutrición online</span>
         <h1>Nutrición con criterio médico, sin salir de casa</h1>
-        <p class="lede">Minutrisalud te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano.</p>
+        <p class="lede">Salud en la Mesa te acompaña por videollamada con equipo médico y nutricionistas: valoración, plan personalizado y seguimiento cercano.</p>
         <div class="hero-actions">
           <a href="contacto.html" class="btn btn--primary btn--arrow">Reservar consulta online <span class="arrow">→</span></a>
           <a href="servicios.html" class="btn btn--ghost">Ver servicios</a>
@@ -93,7 +93,7 @@ index_body = f'''
   <section class="section">
     <div class="wrap split">
       <div class="reveal">
-        <span class="eyebrow">Por qué Minutrisalud</span>
+        <span class="eyebrow">Por qué Salud en la Mesa</span>
         <h2>La nutrición como parte de tu tratamiento, no aparte de él</h2>
         <p style="margin-bottom:var(--space-6);">Detrás de cada recomendación hay criterio médico: se tienen en cuenta tus antecedentes, tu medicación y tus analíticas, coordinando la alimentación con el resto de tu cuidado — todo por videollamada, sin desplazamientos.</p>
         <ul class="check-list">
@@ -179,7 +179,7 @@ index_body = f'''
     <div class="wrap">
       <div class="quote-block reveal" style="max-width:720px;margin-inline:auto;text-align:center;border-left:none;">
         <p>“Un plan de alimentación solo funciona si se entiende por qué se recomienda y se ajusta a la vida real de cada paciente.”</p>
-        <span class="quote-cite">Filosofía de trabajo — Minutrisalud</span>
+        <span class="quote-cite">Filosofía de trabajo — Salud en la Mesa</span>
       </div>
     </div>
   </section>
@@ -219,12 +219,12 @@ index_body = f'''
       <div class="app-teaser reveal">
         <div class="app-teaser-copy">
           <span class="badge">Próximamente</span>
-          <h2>La app Minutrisalud está en camino</h2>
+          <h2>La app Salud en la Mesa está en camino</h2>
           <p>Estamos preparando una aplicación para llevar tu plan de alimentación, registrar tu seguimiento y comunicarte con la consulta desde el móvil.</p>
           <a href="app.html" class="btn btn--warm" style="margin-top:var(--space-4);width:fit-content;">Ver adelanto de la app</a>
         </div>
         <div class="app-teaser-media">
-          <img src="./assets/app-preview.webp" alt="Vista previa conceptual de la futura app Minutrisalud en un teléfono móvil" loading="lazy">
+          <img src="./assets/app-preview.webp" alt="Vista previa conceptual de la futura app Salud en la Mesa en un teléfono móvil" loading="lazy">
         </div>
       </div>
     </div>
@@ -246,8 +246,8 @@ index_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/index.html",
-    "Minutrisalud — Consulta de nutrición online con criterio médico",
-    "Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
+    "Salud en la Mesa — Consulta de nutrición online con criterio médico",
+    "Salud en la Mesa: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
     "Inicio",
     index_body,
 )
@@ -363,8 +363,8 @@ servicios_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/servicios.html",
-    "Servicios — Minutrisalud",
-    "Teleconsulta como canal principal, valoración nutricional, planes de alimentación personalizados y seguimiento periódico en Minutrisalud.",
+    "Servicios — Salud en la Mesa",
+    "Teleconsulta como canal principal, valoración nutricional, planes de alimentación personalizados y seguimiento periódico en Salud en la Mesa.",
     "Servicios",
     servicios_body,
 )
@@ -718,8 +718,8 @@ consejos_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/consejos.html",
-    "Consejos — Nutrición y hábitos saludables | Minutrisalud",
-    "Consejos prácticos de nutrición, hidratación, ejercicio, sueño y bienestar emocional, explicados con criterio médico por el equipo de Minutrisalud.",
+    "Consejos — Nutrición y hábitos saludables | Salud en la Mesa",
+    "Consejos prácticos de nutrición, hidratación, ejercicio, sueño y bienestar emocional, explicados con criterio médico por el equipo de Salud en la Mesa.",
     "Consejos",
     consejos_body,
 )
@@ -855,8 +855,8 @@ calculadora_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/calculadora.html",
-    "Calculadora nutricional — IMC y necesidad calórica | Minutrisalud",
-    "Calcula tu IMC y una estimación de tu necesidad calórica diaria con fórmulas clínicas actuales (SEEDO, Mifflin-St Jeor). Herramienta orientativa de Minutrisalud.",
+    "Calculadora nutricional — IMC y necesidad calórica | Salud en la Mesa",
+    "Calcula tu IMC y una estimación de tu necesidad calórica diaria con fórmulas clínicas actuales (SEEDO, Mifflin-St Jeor). Herramienta orientativa de Salud en la Mesa.",
     "Calculadora",
     calculadora_body,
 )
@@ -976,8 +976,8 @@ precios_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/precios.html",
-    "Planes y precios — Minutrisalud",
-    "Compara los planes de Minutrisalud: Plan Digital autoguiado, Plan Nutrición Online con teleconsulta y dietas especiales, y Plan Médico + Nutrición con valoración conjunta.",
+    "Planes y precios — Salud en la Mesa",
+    "Compara los planes de Salud en la Mesa: Plan Digital autoguiado, Plan Nutrición Online con teleconsulta y dietas especiales, y Plan Médico + Nutrición con valoración conjunta.",
     "Planes y precios",
     precios_body,
 )
@@ -1059,7 +1059,7 @@ pago_body = f'''
             </div>
 
             <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-6);">Continuar al pago seguro</button>
-            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al pulsar, irás a la pasarela de pago de Stripe (entorno de pruebas) para introducir tus datos de tarjeta de forma segura. Minutrisalud nunca almacena los datos de tu tarjeta.</p>
+            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-muted);">Al pulsar, irás a la pasarela de pago de Stripe (entorno de pruebas) para introducir tus datos de tarjeta de forma segura. Salud en la Mesa nunca almacena los datos de tu tarjeta.</p>
           </form>
 
           <div id="checkout-success" class="card checkout-success reveal" hidden>
@@ -1098,8 +1098,8 @@ pago_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/pago.html",
-    "Pago y contratación — Minutrisalud",
-    "Contrata tu plan Minutrisalud de forma segura: Plan Digital, Plan Nutrición Online o Plan Médico + Nutrición.",
+    "Pago y contratación — Salud en la Mesa",
+    "Contrata tu plan Salud en la Mesa de forma segura: Plan Digital, Plan Nutrición Online o Plan Médico + Nutrición.",
     "Planes y precios",
     pago_body,
 )
@@ -1125,7 +1125,7 @@ sobre_body = f'''
           <div class="team-avatar">JS</div>
           <span class="team-role">Medicina interna</span>
           <h3>Dr. Jesús Santiago</h3>
-          <p>Coordinación médica de Minutrisalud. Aporta la valoración clínica de base — antecedentes, medicación y analíticas — sobre la que se construye cada plan de alimentación.</p>
+          <p>Coordinación médica de Salud en la Mesa. Aporta la valoración clínica de base — antecedentes, medicación y analíticas — sobre la que se construye cada plan de alimentación.</p>
         </div>
         <div class="card team-card reveal">
           <div class="team-avatar">RS</div>
@@ -1152,7 +1152,7 @@ sobre_body = f'''
       <div class="reveal">
         <span class="eyebrow">Cómo trabajamos</span>
         <h2>La alimentación, una herramienta terapéutica más</h2>
-        <p style="margin-bottom:var(--space-4);">Minutrisalud nace de la idea de que la nutrición funciona mejor cuando se apoya en criterio médico y seguimiento cercano. El equipo atiende principalmente por videollamada, coordinando la mirada médica y nutricional en cada valoración, plan y revisión.</p>
+        <p style="margin-bottom:var(--space-4);">Salud en la Mesa nace de la idea de que la nutrición funciona mejor cuando se apoya en criterio médico y seguimiento cercano. El equipo atiende principalmente por videollamada, coordinando la mirada médica y nutricional en cada valoración, plan y revisión.</p>
         <p>Esta forma de trabajar se aplica tanto en pacientes con patologías crónicas como en quienes buscan mejorar sus hábitos con acompañamiento profesional.</p>
       </div>
     </div>
@@ -1188,7 +1188,7 @@ sobre_body = f'''
     <div class="wrap">
       <div class="quote-block reveal" style="max-width:720px;margin-inline:auto;text-align:center;border-left:none;">
         <p>“Nuestro objetivo no es que sigas una dieta perfecta durante dos semanas, sino que comas mejor durante años — con el equipo médico y nutricional acompañándote por videollamada.”</p>
-        <span class="quote-cite">Equipo Minutrisalud</span>
+        <span class="quote-cite">Equipo Salud en la Mesa</span>
       </div>
     </div>
   </section>
@@ -1205,8 +1205,8 @@ sobre_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/equipo.html",
-    "Equipo — Minutrisalud",
-    "Conoce al equipo de Minutrisalud: medicina interna y nutrición clínica coordinadas, con atención principalmente online.",
+    "Equipo — Salud en la Mesa",
+    "Conoce al equipo de Salud en la Mesa: medicina interna y nutrición clínica coordinadas, con atención principalmente online.",
     "Equipo",
     sobre_body,
 )
@@ -1214,13 +1214,13 @@ print("equipo built")
 
 
 # ============================================================
-# APP MINUTRISALUD (integration-ready placeholder)
+# APP SALUD EN LA MESA (integration-ready placeholder)
 # ============================================================
 app_body = f'''
   <section class="page-hero">
     <div class="wrap wrap--narrow">
       <span class="badge" style="margin-inline:auto;">En construcción</span>
-      <h1>La app Minutrisalud</h1>
+      <h1>La app Salud en la Mesa</h1>
       <p class="lede" style="margin-inline:auto;text-align:center;">Tu plan de alimentación, tu seguimiento y tu consulta, en el móvil. Esta sección ya está preparada para conectar la aplicación en cuanto esté lista.</p>
     </div>
   </section>
@@ -1241,7 +1241,7 @@ app_body = f'''
         <div class="card reveal">
           <div class="card-icon">{icon('video')}</div>
           <h3>Contacto con la consulta</h3>
-          <p>Mensajes y recordatorios de cita conectados directamente con Minutrisalud.</p>
+          <p>Mensajes y recordatorios de cita conectados directamente con Salud en la Mesa.</p>
         </div>
       </div>
     </div>
@@ -1250,7 +1250,7 @@ app_body = f'''
   <section class="section">
     <div class="wrap wrap--narrow">
       <!--
-        PUNTO DE INTEGRACIÓN — App Minutrisalud
+        PUNTO DE INTEGRACIÓN — App Salud en la Mesa
         ==========================================================
         Este contenedor está preparado para alojar la futura app de nutrición.
         Opciones al conectarla:
@@ -1258,7 +1258,7 @@ app_body = f'''
         1) Insertar la app como iframe (si es una web app):
            <iframe id="app-embed" src="https://app.minutrisalud.com"
              style="width:100%;height:640px;border:0;border-radius:var(--radius-lg);"
-             title="App Minutrisalud"></iframe>
+             title="App Salud en la Mesa"></iframe>
 
         2) Sustituir por botones de descarga (si es app nativa iOS/Android):
            <a href="https://apps.apple.com/..." target="_blank" rel="noopener noreferrer" class="btn btn--primary">Descargar en App Store</a>
@@ -1272,7 +1272,7 @@ app_body = f'''
       <div id="app-embed-container" class="reveal">
         <div>
           <div class="placeholder-icon">{icon('smartphone')}</div>
-          <h3 style="margin-bottom:var(--space-2);">Aquí se integrará la app Minutrisalud</h3>
+          <h3 style="margin-bottom:var(--space-2);">Aquí se integrará la app Salud en la Mesa</h3>
           <p style="font-size:var(--text-sm);max-width:46ch;margin-inline:auto;">Este espacio está listo para alojar la aplicación (como iframe, enlaces de descarga o widget) en cuanto esté publicada.</p>
         </div>
       </div>
@@ -1282,7 +1282,7 @@ app_body = f'''
   <section class="section">
     <div class="wrap wrap--narrow" style="text-align:center;">
       <h2>Sé de los primeros en probarla</h2>
-      <p class="lede" style="margin-inline:auto;margin-bottom:var(--space-8);">Déjanos tu correo y te avisaremos en cuanto la app Minutrisalud esté disponible.</p>
+      <p class="lede" style="margin-inline:auto;margin-bottom:var(--space-8);">Déjanos tu correo y te avisaremos en cuanto la app Salud en la Mesa esté disponible.</p>
       <form id="notify-form" style="display:flex;gap:var(--space-3);max-width:440px;margin-inline:auto;flex-wrap:wrap;justify-content:center;">
         <input type="email" required placeholder="tu@email.com" aria-label="Correo electrónico" style="flex:1;min-width:220px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:0.75em 1.4em;font-size:var(--text-base);color:var(--color-text);">
         <button type="submit" class="btn btn--primary">Avisarme</button>
@@ -1294,9 +1294,9 @@ app_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/app.html",
-    "App Minutrisalud — Próximamente",
-    "La app Minutrisalud está en camino: sigue tu plan de alimentación y tu seguimiento desde el móvil. Página lista para integrar la aplicación.",
-    "App Minutrisalud",
+    "App Salud en la Mesa — Próximamente",
+    "La app Salud en la Mesa está en camino: sigue tu plan de alimentación y tu seguimiento desde el móvil. Página lista para integrar la aplicación.",
+    "App Salud en la Mesa",
     app_body,
 )
 print("app built")
@@ -1475,8 +1475,8 @@ contacto_body = f'''
 
 build(
     "/home/user/workspace/minutrisalud/contacto.html",
-    "Contacto — Minutrisalud",
-    "Reserva tu consulta de nutrición online con Minutrisalud, por videollamada.",
+    "Contacto — Salud en la Mesa",
+    "Reserva tu consulta de nutrición online con Salud en la Mesa, por videollamada.",
     "Contacto",
     contacto_body,
 )
@@ -1504,7 +1504,7 @@ legal_body = f'''
       <p>En cumplimiento del deber de información del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de los siguientes datos:</p>
       <ul>
         <li><strong>Titular:</strong> Jesús María Santiago Toscano</li>
-        <li><strong>Nombre comercial:</strong> Consulta Dr. Santiago — Minutrisalud (servicio de teleconsulta)</li>
+        <li><strong>Nombre comercial:</strong> Consulta Dr. Santiago — Salud en la Mesa (servicio de teleconsulta)</li>
         <li><strong>NIF:</strong> 80126299A</li>
         <li><strong>Domicilio:</strong> C/ Real, 13, 1.º B, 51001 Ceuta</li>
         <li><strong>Correo electrónico de contacto:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
@@ -1514,19 +1514,19 @@ legal_body = f'''
       </ul>
 
       <h2>2. Objeto</h2>
-      <p>Este sitio web (en adelante, "Minutrisalud") tiene por objeto informar sobre los servicios de teleconsulta médica y nutricional ofrecidos por el titular, así como permitir la solicitud de citas y, en su caso, la contratación y el pago de dichos servicios.</p>
+      <p>Este sitio web (en adelante, "Salud en la Mesa") tiene por objeto informar sobre los servicios de teleconsulta médica y nutricional ofrecidos por el titular, así como permitir la solicitud de citas y, en su caso, la contratación y el pago de dichos servicios.</p>
 
       <h2>3. Condiciones de acceso y uso</h2>
-      <p>El acceso a Minutrisalud es gratuito, salvo en lo relativo al coste de la conexión a internet del usuario. El uso del sitio atribuye la condición de usuario y supone la aceptación plena de este aviso legal, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>, de la <a href="#/cookies" data-nav-link="cookies">política de cookies</a> y, cuando proceda, de los <a href="#/terminos" data-nav-link="terminos">términos y condiciones de contratación</a>.</p>
+      <p>El acceso a Salud en la Mesa es gratuito, salvo en lo relativo al coste de la conexión a internet del usuario. El uso del sitio atribuye la condición de usuario y supone la aceptación plena de este aviso legal, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>, de la <a href="#/cookies" data-nav-link="cookies">política de cookies</a> y, cuando proceda, de los <a href="#/terminos" data-nav-link="terminos">términos y condiciones de contratación</a>.</p>
 
       <h2>4. Naturaleza informativa de los contenidos</h2>
-      <p>Los contenidos generales del sitio (artículos, consejos, calculadora nutricional, etc.) tienen finalidad divulgativa y orientativa. No constituyen diagnóstico ni sustituyen una valoración médica o nutricional individualizada, que solo se ofrece mediante teleconsulta contratada con el equipo profesional. Minutrisalud no es un servicio de urgencias: ante cualquier emergencia médica, contacte con el 112 o acuda al centro sanitario más cercano.</p>
+      <p>Los contenidos generales del sitio (artículos, consejos, calculadora nutricional, etc.) tienen finalidad divulgativa y orientativa. No constituyen diagnóstico ni sustituyen una valoración médica o nutricional individualizada, que solo se ofrece mediante teleconsulta contratada con el equipo profesional. Salud en la Mesa no es un servicio de urgencias: ante cualquier emergencia médica, contacte con el 112 o acuda al centro sanitario más cercano.</p>
 
       <h2>5. Propiedad intelectual e industrial</h2>
       <p>Los textos, imágenes, logotipos, código fuente y demás contenidos de este sitio son propiedad del titular o se utilizan con la debida autorización, y están protegidos por la normativa de propiedad intelectual e industrial. Queda prohibida su reproducción, distribución o transformación sin autorización expresa, salvo para uso personal y privado.</p>
 
       <h2>6. Enlaces y servicios de terceros</h2>
-      <p>Minutrisalud utiliza la pasarela de pago de Stripe para la gestión de cobros. El titular no se hace responsable del contenido de sitios web de terceros a los que se pueda acceder mediante enlaces desde este sitio.</p>
+      <p>Salud en la Mesa utiliza la pasarela de pago de Stripe para la gestión de cobros. El titular no se hace responsable del contenido de sitios web de terceros a los que se pueda acceder mediante enlaces desde este sitio.</p>
 
       <h2>7. Protección de datos</h2>
       <p>El tratamiento de los datos personales facilitados a través de este sitio se rige por la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a>.</p>
@@ -1555,7 +1555,7 @@ privacidad_body = f'''
 
       <h2>1. Responsable del tratamiento</h2>
       <ul>
-        <li><strong>Responsable:</strong> Jesús María Santiago Toscano (Consulta Dr. Santiago — Minutrisalud)</li>
+        <li><strong>Responsable:</strong> Jesús María Santiago Toscano (Consulta Dr. Santiago — Salud en la Mesa)</li>
         <li><strong>NIF:</strong> 80126299A</li>
         <li><strong>Domicilio:</strong> C/ Real, 13, 1.º B, 51001 Ceuta</li>
         <li><strong>Correo electrónico:</strong> <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a></li>
@@ -1585,11 +1585,11 @@ privacidad_body = f'''
       <ul>
         <li><strong>Datos identificativos y de contacto:</strong> nombre, correo electrónico, teléfono.</li>
         <li><strong>Datos de salud (categoría especial de datos):</strong> peso, altura, antecedentes, patologías previas, tratamiento farmacológico y demás información clínica que nos facilites para la valoración y el seguimiento nutricional o médico.</li>
-        <li><strong>Datos de pago:</strong> gestionados directamente por Stripe; Minutrisalud no almacena los datos de tu tarjeta.</li>
+        <li><strong>Datos de pago:</strong> gestionados directamente por Stripe; Salud en la Mesa no almacena los datos de tu tarjeta.</li>
       </ul>
 
       <h2>5. Formulario de contacto</h2>
-      <p>Actualmente, el formulario de la sección "Contacto" abre tu propio gestor de correo electrónico para que envíes la solicitud directamente desde tu cuenta; los datos no quedan almacenados en un servidor de Minutrisalud, solo en el correo que tú envías y en el buzón que lo recibe.</p>
+      <p>Actualmente, el formulario de la sección "Contacto" abre tu propio gestor de correo electrónico para que envíes la solicitud directamente desde tu cuenta; los datos no quedan almacenados en un servidor de Salud en la Mesa, solo en el correo que tú envías y en el buzón que lo recibe.</p>
 
       <h2>6. Plazo de conservación</h2>
       <p>Conservaremos tus datos mientras exista una relación asistencial o contractual contigo y, posteriormente, durante los plazos legales de conservación de la documentación clínica y fiscal (con carácter general, la normativa sanitaria exige conservar la historia clínica un mínimo de 5 años desde el alta de cada proceso asistencial, sin perjuicio de plazos superiores que pueda fijar la normativa autonómica o estatal aplicable).</p>
@@ -1612,7 +1612,7 @@ privacidad_body = f'''
       <p>Aplicamos medidas técnicas y organizativas razonables para proteger tus datos frente a accesos no autorizados, pérdida o alteración, en particular al tratarse de datos de salud.</p>
 
       <h2>11. Menores de edad</h2>
-      <p>Los servicios de Minutrisalud están dirigidos a personas mayores de edad. Si un menor requiere atención, deberá facilitarse a través de su tutor legal, quien prestará el consentimiento correspondiente.</p>
+      <p>Los servicios de Salud en la Mesa están dirigidos a personas mayores de edad. Si un menor requiere atención, deberá facilitarse a través de su tutor legal, quien prestará el consentimiento correspondiente.</p>
     </div>
   </section>
 '''
@@ -1633,7 +1633,7 @@ cookies_body = f'''
       <p>Las cookies son pequeños archivos que los sitios web guardan en tu dispositivo para recordar información sobre tu visita, como tus preferencias de navegación.</p>
 
       <h2>2. Cookies que utiliza este sitio actualmente</h2>
-      <p>Minutrisalud, en su versión actual, <strong>no utiliza cookies de análisis, publicidad ni seguimiento de terceros</strong>. Únicamente guarda en tu propio dispositivo, mediante la tecnología "localStorage" del navegador (que no es técnicamente una cookie ni se envía a ningún servidor), tu preferencia de modo claro u oscuro. Esta información no identifica a la persona usuaria ni se comparte con nadie.</p>
+      <p>Salud en la Mesa, en su versión actual, <strong>no utiliza cookies de análisis, publicidad ni seguimiento de terceros</strong>. Únicamente guarda en tu propio dispositivo, mediante la tecnología "localStorage" del navegador (que no es técnicamente una cookie ni se envía a ningún servidor), tu preferencia de modo claro u oscuro. Esta información no identifica a la persona usuaria ni se comparte con nadie.</p>
 
       <h2>3. Cookies que podríamos incorporar en el futuro</h2>
       <p>Si en el futuro incorporamos herramientas de analítica web (por ejemplo, para saber qué páginas se visitan más) o de mensajería, actualizaremos esta política y solicitaremos tu consentimiento mediante un aviso de cookies antes de instalar cualquier cookie no estrictamente necesaria.</p>
@@ -1667,7 +1667,7 @@ terminos_body = f'''
       <div class="legal-pending">Estas condiciones son un borrador orientativo. Antes de activar el cobro real, recomendamos que un profesional del derecho especializado en sanidad y consumo las revise y las complete con los datos pendientes.</div>
 
       <h2>1. Objeto y aceptación</h2>
-      <p>Estas condiciones regulan la contratación online de los servicios de teleconsulta médica y nutricional ofrecidos por Consulta Dr. Santiago — Minutrisalud (identificado en el <a href="#/legal" data-nav-link="legal">aviso legal</a>). La contratación de cualquier plan implica la aceptación íntegra de estas condiciones, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a> y de la información de precios vigente en cada momento.</p>
+      <p>Estas condiciones regulan la contratación online de los servicios de teleconsulta médica y nutricional ofrecidos por Consulta Dr. Santiago — Salud en la Mesa (identificado en el <a href="#/legal" data-nav-link="legal">aviso legal</a>). La contratación de cualquier plan implica la aceptación íntegra de estas condiciones, de la <a href="#/privacidad" data-nav-link="privacidad">política de privacidad</a> y de la información de precios vigente en cada momento.</p>
 
       <h2>2. Descripción de los servicios</h2>
       <p>Los planes disponibles (Digital, Nutrición, Médico-Nutricional, u otros que se publiquen) se describen con detalle en la sección <a href="#/precios" data-nav-link="precios">Planes y precios</a>. El titular puede actualizar el contenido, precio o disponibilidad de los planes, respetando siempre las condiciones ya contratadas por usuarios existentes.</p>
@@ -1682,7 +1682,7 @@ terminos_body = f'''
       <p>Las citas de teleconsulta pueden reprogramarse o cancelarse escribiendo a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a> o al teléfono <a href="tel:+34699443059">+34 699 44 30 59</a>, con la antelación razonable que se indique en la confirmación de la cita.</p>
 
       <h2>6. Naturaleza del servicio y responsabilidad profesional</h2>
-      <p>Los servicios se prestan por profesionales sanitarios colegiados, con arreglo a la lex artis y a la normativa que regula el ejercicio de sus respectivas profesiones. Minutrisalud no es un servicio de urgencias ni sustituye la atención presencial cuando esta sea necesaria; ante una urgencia médica, contacta con el 112.</p>
+      <p>Los servicios se prestan por profesionales sanitarios colegiados, con arreglo a la lex artis y a la normativa que regula el ejercicio de sus respectivas profesiones. Salud en la Mesa no es un servicio de urgencias ni sustituye la atención presencial cuando esta sea necesaria; ante una urgencia médica, contacta con el 112.</p>
 
       <h2>7. Reclamaciones</h2>
       <p>Si no estás conforme con el servicio recibido, puedes presentar tu reclamación por correo electrónico a <a href="mailto:hola@minutrisalud.com">hola@minutrisalud.com</a>. Como paciente, también tienes derecho a solicitar la hoja de reclamaciones correspondiente.</p>

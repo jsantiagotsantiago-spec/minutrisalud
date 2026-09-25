@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Genera una versión "de una sola página" (SPA) de Minutrisalud.
+Genera una versión "de una sola página" (SPA) de Salud en la Mesa.
 
 Por qué existe este archivo:
 La vista previa privada de Perplexity Computer (el recuadro que se ve dentro
@@ -33,20 +33,20 @@ BRAND_SVG = build_pages.BRAND_SVG
 
 # slug interno -> (título de pestaña, variable de contenido, etiqueta de menú)
 PAGES = [
-    ("index", "Minutrisalud — Consulta de nutrición online con criterio médico", make_site.index_body, "Inicio"),
-    ("servicios", "Servicios — Minutrisalud", make_site.servicios_body, "Servicios"),
-    ("consejos", "Consejos — Nutrición y hábitos saludables | Minutrisalud", make_site.consejos_body, "Consejos"),
-    ("calculadora", "Calculadora nutricional — IMC y necesidad calórica | Minutrisalud", make_site.calculadora_body, "Calculadora"),
-    ("precios", "Planes y precios — Minutrisalud", make_site.precios_body, "Planes y precios"),
-    ("pago", "Pago y contratación — Minutrisalud", make_site.pago_body, "Pago"),
-    ("equipo", "Equipo — Minutrisalud", make_site.sobre_body, "Equipo"),
-    ("app", "App Minutrisalud — Próximamente", make_site.app_body, "App Minutrisalud"),
+    ("index", "Salud en la Mesa — Consulta de nutrición online con criterio médico", make_site.index_body, "Inicio"),
+    ("servicios", "Servicios — Salud en la Mesa", make_site.servicios_body, "Servicios"),
+    ("consejos", "Consejos — Nutrición y hábitos saludables | Salud en la Mesa", make_site.consejos_body, "Consejos"),
+    ("calculadora", "Calculadora nutricional — IMC y necesidad calórica | Salud en la Mesa", make_site.calculadora_body, "Calculadora"),
+    ("precios", "Planes y precios — Salud en la Mesa", make_site.precios_body, "Planes y precios"),
+    ("pago", "Pago y contratación — Salud en la Mesa", make_site.pago_body, "Pago"),
+    ("equipo", "Equipo — Salud en la Mesa", make_site.sobre_body, "Equipo"),
+    ("app", "App Salud en la Mesa — Próximamente", make_site.app_body, "App Salud en la Mesa"),
     ("nutrigest", "NutriGest — gestión de la consulta (equipo)", make_site.nutrigest_body, "NutriGest"),
-    ("contacto", "Contacto — Minutrisalud", make_site.contacto_body, "Contacto"),
-    ("legal", "Aviso legal — Minutrisalud", make_site.legal_body, "Aviso legal"),
-    ("privacidad", "Política de privacidad — Minutrisalud", make_site.privacidad_body, "Privacidad"),
-    ("cookies", "Política de cookies — Minutrisalud", make_site.cookies_body, "Cookies"),
-    ("terminos", "Términos y condiciones — Minutrisalud", make_site.terminos_body, "Términos y condiciones"),
+    ("contacto", "Contacto — Salud en la Mesa", make_site.contacto_body, "Contacto"),
+    ("legal", "Aviso legal — Salud en la Mesa", make_site.legal_body, "Aviso legal"),
+    ("privacidad", "Política de privacidad — Salud en la Mesa", make_site.privacidad_body, "Privacidad"),
+    ("cookies", "Política de cookies — Salud en la Mesa", make_site.cookies_body, "Cookies"),
+    ("terminos", "Términos y condiciones — Salud en la Mesa", make_site.terminos_body, "Términos y condiciones"),
 ]
 
 SLUGS = {slug for slug, *_ in PAGES}
@@ -59,7 +59,7 @@ NAV_ITEMS = [
     ("Calculadora", "calculadora"),
     ("Planes y precios", "precios"),
     ("Equipo", "equipo"),
-    ("App Minutrisalud", "app"),
+    ("App Salud en la Mesa", "app"),
     ("Contacto", "contacto"),
 ]
 
@@ -76,7 +76,7 @@ def spa_header(active_slug):
     <div class="wrap header-inner">
       <a href="#/index" class="brand" data-nav-link="index">
         {BRAND_SVG}
-        <span class="brand-name">Minutrisalud</span>
+        <span class="brand-name">Salud en la Mesa</span>
       </a>
       <nav class="nav">
         <div class="nav-links">
@@ -97,7 +97,7 @@ def spa_header(active_slug):
     <div class="mobile-nav-header">
       <a href="#/index" class="brand" data-nav-link="index">
         {BRAND_SVG}
-        <span class="brand-name">Minutrisalud</span>
+        <span class="brand-name">Salud en la Mesa</span>
       </a>
       <button class="mobile-nav-close" aria-label="Cerrar menú" type="button">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -121,7 +121,7 @@ SPA_FOOTER = f'''  <footer class="footer">
         <div class="footer-brand">
           <a href="#/index" class="brand" data-nav-link="index">
             {BRAND_SVG}
-            <span class="brand-name">Minutrisalud</span>
+            <span class="brand-name">Salud en la Mesa</span>
           </a>
           <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento.</p>
         </div>
@@ -134,7 +134,7 @@ SPA_FOOTER = f'''  <footer class="footer">
             <li><a href="#/calculadora" data-nav-link="calculadora">Calculadora nutricional</a></li>
             <li><a href="#/precios" data-nav-link="precios">Planes y precios</a></li>
             <li><a href="#/equipo" data-nav-link="equipo">Equipo</a></li>
-            <li><a href="#/app" data-nav-link="app">App Minutrisalud</a></li>
+            <li><a href="#/app" data-nav-link="app">App Salud en la Mesa</a></li>
             <li><a href="#/nutrigest" data-nav-link="nutrigest">NutriGest (equipo)</a></li>
           </ul>
         </div>
@@ -167,7 +167,7 @@ SPA_FOOTER = f'''  <footer class="footer">
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Minutrisalud. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Salud en la Mesa. Todos los derechos reservados.</p>
         <p>Contenido con fines informativos. No sustituye una valoración médica presencial.</p>
       </div>
     </div>
@@ -297,8 +297,8 @@ CONSTRUCTION_BANNER = '''  <div class="construction-banner">
 
 def build_spa(filename):
     html = HEAD_TEMPLATE.format(
-        title="Minutrisalud — Consulta de nutrición online con criterio médico",
-        description="Minutrisalud: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
+        title="Salud en la Mesa — Consulta de nutrición online con criterio médico",
+        description="Salud en la Mesa: consulta de nutrición online por videollamada, con equipo médico y nutricionistas. Valoración, planes personalizados y seguimiento.",
     )
     html += CONSTRUCTION_BANNER
     html += spa_header("index")
@@ -333,7 +333,7 @@ if __name__ == "__main__":
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="refresh" content="0; url={target}" />
-  <title>Minutrisalud</title>
+  <title>Salud en la Mesa</title>
   <script>window.location.replace({target!r});</script>
 </head>
 <body>

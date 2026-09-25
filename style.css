@@ -1,5 +1,5 @@
 /* ============================================
-   MINUTRISALUD — Design Tokens
+   SALUD EN LA MESA — Design Tokens
    Organic wellness palette derived from brand logo
    ============================================ */
 
@@ -1143,7 +1143,7 @@ p {
   object-fit: cover;
 }
 
-/* Integration container for the future Minutrisalud app.
+/* Integration container for the future Salud en la Mesa app.
    The nutrition app can be embedded here later, e.g.:
    <iframe id="app-embed" src="https://app.minutrisalud.com" ...></iframe>
    or replaced with a "Descargar app" button linking to app stores. */

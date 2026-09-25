@@ -7,7 +7,7 @@ NAV_ITEMS = [
     ("Calculadora", "calculadora.html"),
     ("Planes y precios", "precios.html"),
     ("Equipo", "equipo.html"),
-    ("App Minutrisalud", "app.html"),
+    ("App Salud en la Mesa", "app.html"),
     ("Contacto", "contacto.html"),
 ]
 
@@ -26,7 +26,7 @@ def header(active):
     <div class="wrap header-inner">
       <a href="index.html" class="brand">
         {BRAND_SVG}
-        <span class="brand-name">Minutrisalud</span>
+        <span class="brand-name">Salud en la Mesa</span>
       </a>
       <nav class="nav">
         <div class="nav-links">
@@ -47,7 +47,7 @@ def header(active):
     <div class="mobile-nav-header">
       <a href="index.html" class="brand">
         {BRAND_SVG}
-        <span class="brand-name">Minutrisalud</span>
+        <span class="brand-name">Salud en la Mesa</span>
       </a>
       <button class="mobile-nav-close" aria-label="Cerrar menú" type="button">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -70,7 +70,7 @@ FOOTER = f'''  <footer class="footer">
         <div class="footer-brand">
           <a href="index.html" class="brand">
             {BRAND_SVG}
-            <span class="brand-name">Minutrisalud</span>
+            <span class="brand-name">Salud en la Mesa</span>
           </a>
           <p>Consulta de nutrición online, con equipo médico y nutricionistas: valoración, planes de alimentación y seguimiento.</p>
         </div>
@@ -83,7 +83,7 @@ FOOTER = f'''  <footer class="footer">
             <li><a href="calculadora.html">Calculadora nutricional</a></li>
             <li><a href="precios.html">Planes y precios</a></li>
             <li><a href="equipo.html">Equipo</a></li>
-            <li><a href="app.html">App Minutrisalud</a></li>
+            <li><a href="app.html">App Salud en la Mesa</a></li>
             <li><a href="nutrigest.html">NutriGest (equipo)</a></li>
           </ul>
         </div>
@@ -107,7 +107,7 @@ FOOTER = f'''  <footer class="footer">
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Minutrisalud. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Salud en la Mesa. Todos los derechos reservados.</p>
         <p>Contenido con fines informativos. No sustituye una valoración médica presencial.</p>
       </div>
     </div>
